@@ -1,32 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3A758C">
+  <title>Portfolio - Lili Mkrtchyan</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>My Website</h1>
+  <header>
+    <nav class="navbar" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <div class="hero-text">
+        <h1 class="tagline">I'll figure it out.</h1>
+        <p class="intro">Hi! I'm Lili Mkrtchyan. I love exploring research, speculative design, and creating innovative projects.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="projects" class="projects">
+      <h2>Explore My Work</h2>
+      <div class="project-grid">
+        <!-- Hardware Projects -->
+        <div class="project-card">
+          <a href="hardware.html" aria-label="View Hardware Projects">
+            <div class="image-placeholder">
+              <img src="images/cube2.jpg" alt="Hardware Projects Thumbnail">
             </div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>Welcome to My Website</h1>
-        <p>Explore our amazing content and features</p>
-        <a href="#about" class="cta-button">Learn More</a>
+            <h3>Hardware Projects</h3>
+          </a>
+        </div>
+        <!-- Speculative Sketches -->
+        <div class="project-card">
+          <a href="sketches.html" aria-label="View Speculative Sketches">
+            <div class="image-placeholder">
+              <img src="images/speculative_thumbnail.png" alt="Speculative Designs Thumbnail">
+            </div>
+            <h3>Speculative Sketches</h3>
+          </a>
+        </div>
+        <!-- Research Experience -->
+        <div class="project-card">
+          <a href="research.html" aria-label="View Research Experience">
+            <div class="image-placeholder">
+              <img src="images/pilot_study_Lili.png" alt="Research Experience Thumbnail">
+            </div>
+            <h3>Research Experience</h3>
+          </a>
+        </div>
+        <!-- Digital Product Design -->
+        <div class="project-card">
+          <a href="digital.html" aria-label="View Digital Product Design Projects">
+            <div class="image-placeholder">
+              <img src="images/dpd_thumbnail.png" alt="Digital Product Design Thumbnail">
+            </div>
+            <h3>Digital Product Design</h3>
+          </a>
+        </div>
+        <!-- Other Projects -->
+        <div class="project-card">
+          <a href="other.html" aria-label="View Other Projects">
+            <div class="image-placeholder">
+              <img src="images/other_projects.jpg" alt="Other Projects Thumbnail">
+            </div>
+            <h3>Other Projects</h3>
+          </a>
+        </div>
+        <!-- Work Experience -->
+        <div class="project-card">
+          <a href="work_experience.html" aria-label="View Work Experience">
+            <div class="image-placeholder">
+              <img src="images/work_experience.jpg" alt="Work Experience Thumbnail">
+            </div>
+            <h3>Work Experience</h3>
+          </a>
+        </div>
+        <!-- Hobbies -->
+        <div class="project-card">
+          <a href="hobbies.html" aria-label="View Hobbies">
+            <div class="image-placeholder">
+              <img src="images/drawing-removebg-preview.png" alt="Hobbies Thumbnail">
+            </div>
+            <h3>Hobbies</h3>
+          </a>
+        </div>
+      </div>
     </section>
-    <footer>
-        <p>&copy; 2024 Lili Mkrtchyan. All Rights Reserved.</p>
-    </footer>
+
+    <!-- <section id="about" class="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="images/lili_photo.jpg" alt="Lili Mkrtchyan's photo">
+        <p>I'm Lili, a creative thinker passionate about speculative design, hardware innovation, and impactful research. With a curious mind and a drive for exploration, I love tackling challenges and crafting meaningful solutions.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <p>Let's collaborate! Feel free to reach out through my socials or via email.</p>
+      <div class="contact-links">
+        <a href="mailto:lili@example.com" aria-label="Email Lili">Email</a>
+        <a href="https://linkedin.com/in/lili" aria-label="Visit LinkedIn">LinkedIn</a>
+        <a href="https://github.com/lili" aria-label="Visit GitHub">GitHub</a>
+      </div>
+    </section> -->
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Lili Mkrtchyan | Designed with passion.</p>
+  </footer>
 </body>
 </html>

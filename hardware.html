@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardware Projects - Lili Mkrtchyan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hardware-page">
+    <nav class="navbar" aria-label="Navigation for Hardware Projects">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="hardware.html">Hardware Projects</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <div class="hero-text">
+        <h1 class="tagline">Hardware Projects</h1>
+        <p class="intro">Explore my projects that involve hands-on hardware design, circuit building, and prototyping.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content hardware-page">
+      <h2>Featured Hardware Projects</h2>
+      <p>Here are some of my recent hardware projects, showcasing my experience with different technologies and design approaches.</p>
+
+      <!-- Include CubeScrub Section -->
+      <div id="cubescrub-container"></div>
+    </div>
+  </main>
+
+  <footer class="hardware-page footer">
+    <p>&copy; 2024 Lili Mkrtchyan | Designed with passion.</p>
+  </footer>
+
+  <script>
+    fetch('cubescrub.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('cubescrub-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading CubeScrub content:', error));
+  </script>
+</body>
+</html>
