@@ -135,4 +135,40 @@
     color: #D9D4C7;
     margin-top: 20px;
   }
+
+  /* Functional Units Table Styling */
+.functional-units-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  .functional-units-table th,
+  .functional-units-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .functional-units-table th {
+    background-color: #3A758C;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .functional-units-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .functional-units-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .functional-units-table td:first-child {
+    font-weight: bold;
+    color: #3A758C;
+  }
+  
   
