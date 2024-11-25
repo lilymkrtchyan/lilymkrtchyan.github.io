@@ -310,3 +310,26 @@ footer {
   color: #D95E52;
   margin-bottom: 10px;
 }
+
+/* Highlighted Announcement */
+.highlighted-announcement {
+  margin: 40px 0;
+  padding: 20px;
+  background: #F9F2D7;
+  border: 2px solid #D95E52;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlighted-announcement h4 {
+  font-size: 1.8rem;
+  color: #D95E52;
+  margin-bottom: 10px;
+}
+
+.highlighted-announcement p {
+  font-size: 1.2rem;
+  color: #3A758C;
+  line-height: 1.6;
+}
