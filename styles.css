@@ -333,3 +333,23 @@ footer {
   color: #3A758C;
   line-height: 1.6;
 }
+
+/* CubeScrub Section Styling */
+.cubescrub-section {
+  background: #F9F9F9;
+  border-left: 4px solid #D95E52;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cubescrub-section h4 {
+  color: #3A758C;
+  font-size: 1.5rem;
+}
+
+.cubescrub-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
