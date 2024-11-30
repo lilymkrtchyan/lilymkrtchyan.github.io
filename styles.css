@@ -353,3 +353,128 @@ footer {
   font-size: 1.1rem;
   line-height: 1.6;
 }
+
+.project-section p strong {
+  color: #D95E52;
+  font-weight: bold;
+}
+
+/* Footer */
+.digital-page.footer {
+  background: #3A758C;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Adjustments for Brainstorming and Matrix Images */
+.project-media h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #3A758C;
+}
+
+.project-media img {
+  width: 90%;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+.project-media .image-caption {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+      flex-direction: column;
+      align-items: flex-end;
+  }
+
+  .hero-text {
+      max-width: 90%;
+      font-size: 1.2rem;
+  }
+
+  .content h2 {
+      font-size: 1.8rem;
+  }
+
+  .project-section h3 {
+      font-size: 1.5rem;
+  }
+
+  .project-section p {
+      font-size: 1rem;
+  }
+
+  .highlighted-announcement h4 {
+      font-size: 1.5rem;
+  }
+}
+
+/* Brainstorming and Matrix Image Adjustments */
+.centered-image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 80%;
+  height: auto;
+}
+
+.project-media .image-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Prototype Gallery */
+.prototype-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.prototype-item {
+  text-align: center;
+  flex: 1 1 30%;
+}
+
+.prototype-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.prototype-item h4 {
+  font-size: 1rem;
+  color: #3A758C;
+  margin-bottom: 10px;
+}
+
+/* Adjustments for Responsiveness */
+@media (max-width: 768px) {
+  .centered-image img {
+      width: 100%;
+  }
+
+  .prototype-gallery {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .prototype-item {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+  }
+}
+
+
