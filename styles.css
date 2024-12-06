@@ -1827,4 +1827,121 @@ section p {
   margin-top: 8px;
 }
 
+/* Hero Section Styling for Hobbies */
+.hobbies-hero {
+  background-image: url("images/travel_background.jpg"); /* Replace with a relevant background image */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hobbies-hero .hero-text {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.hobbies-hero .tagline {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.hobbies-hero .intro {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Hobbies Grid Section */
+.hobbies-content {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.hobby-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.hobby-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.hobby-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  color: #333;
+}
+
+.hobby-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Painting Section Styling */
+.painting-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fafafa;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.painting-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.painting-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.painting-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.painting-gallery figure {
+  max-width: 300px;
+  text-align: center;
+}
+
+.painting-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.painting-gallery figcaption {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #666;
+}
 
