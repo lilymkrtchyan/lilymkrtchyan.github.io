@@ -1504,4 +1504,327 @@ section p {
   color: #007acc;
 }
 
+/* Work experience */
+.work-experience-hero {
+  background-size: cover;
+  background-position: 75% center; /* Moves the focus to the right */
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 20px; /* Adds padding for content alignment */
+}
+
+.work-experience-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Lighter overlay for better visibility */
+  z-index: 1;
+}
+
+.work-experience-hero .hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: left; /* Aligns the text to the left */
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.85); /* Adds a subtle white background */
+  padding: 15px 20px;
+  border-radius: 8px;
+}
+
+.work-experience-hero .tagline {
+  font-size: 2rem;
+  margin: 0;
+  color: #e63946; /* Accent color for the title */
+}
+
+.work-experience-hero .intro {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.work-experience-section {
+  margin: 40px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.work-experience-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.work-experience-image {
+  flex: 1 1 200px;
+  max-width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.work-experience-details {
+  flex: 2 1 400px;
+}
+
+.work-experience-details p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.work-experience-details ul {
+  margin: 10px 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.work-experience-details ul li {
+  margin-bottom: 10px;
+}
+
+.work-experience-details a {
+  color: #e63946; /* Accent color to make the link stand out */
+  text-decoration: none; /* Removes underline for a clean look */
+  font-weight: bold; /* Makes the link more prominent */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.work-experience-details a:hover {
+  color: #b5172f; /* Darker shade of the accent color on hover */
+  text-decoration: underline; /* Adds an underline on hover */
+}
+
+.article-embed {
+  display: flex;
+  justify-content: center; /* Centers the iframe horizontally */
+  width: 100%; /* Ensures the container takes full width */
+  margin: 20px 0; /* Adds some spacing above and below */
+}
+
+.responsive-iframe {
+  width: 100%; /* Full width */
+  max-width: 1200px; /* Optional: Restrict maximum width */
+  height: 900px; /* Fixed height for better view */
+  border: none; /* Removes any border from iframe */
+}
+
+@media (max-width: 768px) {
+  .responsive-iframe {
+    height: 700px; /* Adjust height for smaller screens */
+  }
+}
+
+/* Leadership experience at the work exoerience page */
+.leadership-experience {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f9f9f9; /* Subtle background for the section */
+  border-radius: 10px;
+}
+
+.leadership-experience h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd; /* Subtle divider */
+}
+
+.experience-item:last-child {
+  border-bottom: none; /* Remove bottom border for the last item */
+}
+
+.experience-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.experience-details h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #0056b3; /* Matches link color for consistency */
+}
+
+.experience-details p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.work-experience-section {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.work-experience-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.work-experience-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.work-experience-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.work-experience-details h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #0056b3;
+}
+
+.work-experience-details p {
+  margin: 5px 0 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.work-experience-details ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.work-experience-details ul li {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* Research Page Hero Section */
+.research-hero {
+  background-image: url('images/pilot_study_Lili.png'); /* Hero background image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.research-hero .tagline {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.research-hero .intro {
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+/* Research Sections */
+.research-section {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.research-section h2 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.research-section p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.research-section ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.research-section li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Research Section Image */
+.research-section figure {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.research-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.research-section figcaption {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 8px;
+}
+
+/* Flexbox for Content Alignment */
+.scifi-lab .content-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Description Styling */
+.scifi-lab .description {
+  flex: 1;
+}
+
+/* Image Container Styling */
+.scifi-lab .image-container {
+  flex: 0 0 250px; /* Fix image width */
+  text-align: center;
+}
+
+.scifi-lab img {
+  width: 100%; /* Ensure it scales within container */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.scifi-lab figcaption {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 8px;
+}
+
 
