@@ -1115,6 +1115,7 @@ section p {
 .image-row img {
   width: 100%;
   border-radius: 8px;
+
 }
 
 .image-row figcaption {
@@ -1139,7 +1140,7 @@ section p {
 
 .image-row.smaller-images img {
   width: 100%; /* Ensure images fit within their parent */
-  max-width: 150px; /* Set a maximum width for smaller images */
+  max-width: 250px; /* Set a maximum width for smaller images */
   border-radius: 8px; /* Rounded corners for aesthetics */
 }
 
@@ -1179,7 +1180,7 @@ section p {
 .sliding-cards-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 1500px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -1220,7 +1221,7 @@ section p {
 
 .image-row figure {
   flex: 1;
-  max-width: 120px; /* Ensure images are small */
+  max-width: 250px; /* Ensure images are small */
   text-align: center;
 }
 
