@@ -2033,3 +2033,36 @@ body {
   padding: 0; /* Ensure no extra padding */
 }
 
+/* Resume Download Section */
+#resume-download {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#resume-download h3 {
+  font-size: 1.8rem;
+  color: #3A758C;
+  margin-bottom: 15px;
+}
+
+.download-btn button {
+  background-color: #007ACC;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn button:hover {
+  background-color: #005999;
+}
+
+
