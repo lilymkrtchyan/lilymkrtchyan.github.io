@@ -1945,3 +1945,23 @@ section p {
   color: #666;
 }
 
+.personal-statement {
+  background: url('images/armenia_collage.jpeg') no-repeat center center;
+  background-size: cover;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1800px; /* Increased width for a more horizontal layout */
+  border-radius: 10px;
+  font-weight: 550; /* Slightly bolder text */
+}
+
+.personal-statement-content {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.personal-statement h2 {
+  text-align: center;
+}
+
