@@ -2203,3 +2203,143 @@ body {
 .lidar{
   height: 450px;
 }
+
+/* Main Projects Container */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with consistent card sizes */
+  gap: 20px; /* Space between items */
+  max-width: 1200px; /* Limit container width */
+  margin: 0 auto; /* Center container */
+  padding: 20px;
+}
+
+/* Individual Project Cards */
+.project {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain; /* Ensures image fits without distortion */
+  margin-bottom: 10px;
+}
+
+/* Spider Project */
+.spider-project {
+  grid-column: span 2; /* Make it wider */
+}
+
+/* Locker and Jack in the Box Specific Adjustments */
+.locker-project,
+.jack-in-box-project {
+  align-self: center; /* Center within grid row */
+  justify-self: center; /* Center horizontally */
+}
+
+/* Consistent Vertical Heights */
+.project h3 {
+  font-size: 1.2rem;
+  color: #007acc;
+  margin-bottom: 8px;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+}
+
+/* Main Projects Container */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between items */
+  max-width: 1200px; /* Limit container width */
+  margin: 0 auto; /* Center container */
+  padding: 20px;
+}
+
+/* Individual Project Cards */
+.project {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain; /* Ensures image fits without distortion */
+  margin-bottom: 10px;
+}
+
+/* Spider Project */
+.spider-project {
+  grid-column: span 2; /* Make the Spider project span two columns for better alignment */
+  max-width: 600px; /* Adjust max width */
+  margin: 0 auto; /* Center within its grid space */
+}
+
+/* Lidar Project */
+.lidar-project {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Ensure Consistent Vertical Heights */
+.project h3 {
+  font-size: 1.2rem;
+  color: #007acc;
+  margin-bottom: 8px;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+
+  .spider-project {
+    grid-column: span 1; /* Revert to a single column on smaller screens */
+  }
+}
