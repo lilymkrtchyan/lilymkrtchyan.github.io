@@ -2071,3 +2071,135 @@ body {
 .download-btn button:hover {
   background-color: #005999; /* Darker shade on hover */
 }
+
+/* Projects Section */
+.projects-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Spider Project */
+.spider-project {
+  flex: 1; /* Occupies space on the left */
+  max-width: 300px; /* Ensures the Spider project is not too wide */
+}
+
+/* Grid for Other Projects */
+.projects-grid {
+  display: grid;
+  flex: 3; /* Takes the remaining space */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between grid items */
+}
+
+/* Styling Individual Projects */
+.project {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+/* Image Styling */
+.project img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+/* Shortened Project Cards */
+.project.short {
+  margin-bottom: 0px; /* Aligns vertically with other cards */
+}
+
+.project.short img {
+  height: 150px; /* Ensure the images are proportionate */
+  object-fit: cover; /* Crop images if necessary */
+}
+
+/* Special Cases for Vertical Alignment */
+.animated-steam-engine {
+  margin-top: -20px; /* Reduce space between the magnetometer and steam engine */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+  }
+}
+
+/* Specific Short Card Styling */
+.project.short {
+  padding: 10px 15px; /* Reduce padding inside the card */
+  height: 350px; /* Allow the height to adjust dynamically */
+  min-height: 100px; /* Set a smaller minimum height */
+}
+
+.lcd-display-projects{
+  display: flex;
+  flex-direction: column;
+}
+
+.advanced-io{
+  height: 450px;
+}
+
+.project {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img {
+  max-width: 100%; /* Ensure responsiveness */
+  max-height: 200px; /* Set a max height to limit the size */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Rounded edges */
+  object-fit: contain; /* Ensure the image fits within the constraints */
+  margin-bottom: 10px; /* Space between image and title */
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  color: #007acc;
+  margin-bottom: 8px;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.animated-steam-engine{
+  height: 450px;
+  margin-top: 5px;
+}
+
+.locker-project,
+.jack-in-box-project {
+  max-width: 300px; /* Adjust to match the image width */
+  margin: 0 auto; /* Center the card */
+  text-align: center; /* Center-align content */
+}
+
+.lidar{
+  height: 450px;
+}
