@@ -1,177 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#3A758C">
-  <title>Portfolio - Lili Mkrtchyan</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lili Mkrtchyan – Portfolio</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 20px;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid #333;
+    }
+
+    .hero {
+      background: #f8f8f8;
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .tagline {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .projects h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-card h3 {
+      margin: 16px 0;
+      font-size: 1.2rem;
+      color: #222;
+    }
+
+    .download-btn {
+      text-align: center;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .download-btn button {
+      background-color: #3A758C;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .download-btn button:hover {
+      background-color: #2f5f71;
+    }
+
+    .personal-statement {
+      margin-top: 80px;
+    }
+
+    .personal-statement h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .personal-statement p {
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f5f5f5;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 80px;
+    }
+
+    .project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.project-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.project-block a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-block img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.project-block h3 {
+  font-size: 1.4rem;
+  margin: 16px 0 8px;
+}
+
+.project-block p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.navbar .dropdown {
+  position: relative;
+}
+
+.navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  padding: 10px 0;
+  list-style: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f2f2f2;
+}
+
+
+  </style>
 </head>
 <body>
-  <header>
-    <nav class="navbar" aria-label="Main navigation">
-      <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="hardware.html">CubeScrub</a></li>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">Lili Mkrtchyan</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="hardware.html">CubeScrub</a></li>
+            <li><a href="other.html">FringeEasy</a></li>
+            <li><a href="digital.html">Telegram LiveChat</a></li>
+            <li><a href="list_projects.html">More Projects</a></li>
+          </ul>
+        </li>
+        <li><a href="work_experience.html">Work</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a href="digital.html">Digital Product Design</a></li>
-        <li><a href="work_experience.html">Work Experience</a></li>
-        <!-- <li><a href="hobbies.html">Hobbies</a></li> -->
-        <li><a href="other.html">FringeEasy</a></li>
-        <li><a href="list_projects.html">More Projects</a></li>
       </ul>
-    </nav>
-    
-    <div class="hero">
-      <div class="hero-text">
-        <h1 class="tagline">I'll figure it out.</h1>
-        <p class="intro">Hi! I'm Lili Mkrtchyan. I love exploring research, speculative design, and creating innovative projects.</p>
-      </div>
     </div>
-  </header>
+  </nav>
+  
 
-<div class="container">
-  <main>
+  <section class="hero">
+    <h1 class="tagline">I'll figure it out.</h1>
+    <p class="intro">Hi! I'm Lili Mkrtchyan. I love exploring research, speculative design, and creating innovative projects.</p>
+  </section>
 
-    <section id="projects" class="projects">
-      <h2>Explore My Work</h2>
-      <div class="project-grid">
-        <!-- Hardware Projects -->
-        <div class="project-card">
-          <a href="hardware.html" aria-label="View Hardware Projects">
-            <div class="image-placeholder">
-              <img src="images/cubescrub_instructions.png" alt="Hardware Projects Thumbnail">
-            </div>
+  <div class="container">
+    <main>
+      <section class="projects">
+        <h2>Explore My Work</h2>
+      
+        <div class="project-card-horizontal">
+          <img src="images/cubescrub_instructions.png" alt="CubeScrub Thumbnail" />
+          <div class="project-info">
             <h3>CubeScrub</h3>
-          </a>
+            <p>A 3-axis cleaning robot inspired by Cartesian systems — made with gears, belts, and 3D-printed joints.</p>
+            <a href="hardware.html">View Project →</a>
+          </div>
         </div>
-        <!-- Speculative Sketches
-        <div class="project-card">
-          <a href="sketches.html" aria-label="View Speculative Sketches">
-            <div class="image-placeholder">
-              <img src="images/speculative_thumbnail.png" alt="Speculative Designs Thumbnail">
-            </div>
-            <h3>Speculative Sketches</h3>
-          </a>
-        </div> -->
-        <!-- Research Experience -->
-        <div class="project-card">
-          <a href="research.html" aria-label="View Research Experience">
-            <div class="image-placeholder">
-              <img src="images/pilot_study_Lili.png" alt="Research Experience Thumbnail">
-            </div>
-            <h3>Research Experience</h3>
-          </a>
+      
+      
+        <div class="project-card-horizontal">
+          <img src="images/dpd_thumbnail.png" alt="Digital Product Design Thumbnail" />
+          <div class="project-info">
+            <h3>LiveChat</h3>
+            <p>Digital Product design case study implementing a "LiveChat" to Telegram.</p>
+            <a href="digital.html">View Project →</a>
+          </div>
         </div>
-        <!-- Digital Product Design -->
-        <div class="project-card">
-          <a href="digital.html" aria-label="View Digital Product Design Projects">
-            <div class="image-placeholder">
-              <img src="images/dpd_thumbnail.png" alt="Digital Product Design Thumbnail">
-            </div>
-            <h3>Digital Product Design</h3>
-          </a>
-        </div>
-        <!-- Other Projects -->
-        <div class="project-card">
-          <a href="other.html" aria-label="View Other Projects">
-            <div class="image-placeholder">
-              <img src="images/other_projects.jpg" alt="Other Projects Thumbnail">
-            </div>
+      
+        <div class="project-card-horizontal">
+          <img src="images/other_projects.jpg" alt="FringeEasy Thumbnail" />
+          <div class="project-info">
             <h3>FringeEasy</h3>
-          </a>
+            <p>Data-driven tourism solution for Edinburgh. Designed to reduce overtourism and guide locals + visitors.</p>
+            <a href="other.html">View Project →</a>
+          </div>
         </div>
-        <!-- Work Experience -->
-        <div class="project-card">
-          <a href="work_experience.html" aria-label="View Work Experience">
-            <div class="image-placeholder">
-              <img src="images/work_experience.jpg" alt="Work Experience Thumbnail">
-            </div>
+      
+        <div class="project-card-horizontal">
+          <img src="images/work_experience.jpg" alt="Work Experience Thumbnail" />
+          <div class="project-info">
             <h3>Work Experience</h3>
+            <p>Research, archival, and design internships across Armenia and Washington D.C. focused on history & tech.</p>
+            <a href="work_experience.html">View Project →</a>
+          </div>
+        </div>
+      </section>
+      
+      <div class="project-card-horizontal">
+        <img src="images/pilot_study_Lili.png" alt="Research Thumbnail" />
+        <div class="project-info">
+          <h3>Research Experience</h3>
+          <p>Exploring eyelid tracking using IR sensors, ground truth data labeling, and wearable system evaluation.</p>
+          <a href="research.html">View Project →</a>
+        </div>
+      </div>
+
+      <section id="resume-download" class="downloads">
+        <h3>Download Documents</h3>
+        <div class="download-buttons">
+          <a href="files/Lili_Mkrtchyan_Resume2024.pdf" download>
+            <button type="button">Download Resume (PDF)</button>
+          </a>
+          <a href="files/Lili_Mkrtchyan_Portfolio.pdf" download>
+            <button type="button">Download Portfolio (PDF)</button>
           </a>
         </div>
-        <!-- Hobbies -->
-        <!-- <div class="project-card">
-          <a href="hobbies.html" aria-label="View Hobbies">
-            <div class="image-placeholder">
-              <img src="images/drawing-removebg-preview.png" alt="Hobbies Thumbnail">
-            </div>
-            <h3>Hobbies</h3>
-          </a>
-        </div> -->
-      </div>
-    </section>
+      </section>
+      
 
-    <section id="resume-download">
-      <h3>Download My Resume</h3>
-      <a href="files/Lili_Mkrtchyan_Resume2024.pdf" download class="download-btn">
-        <button type="button">Download Resume (PDF)</button>
-      </a>
-    </section>
-    
-
-    <section id="personal-statement" class="personal-statement">
-      <div class="personal-statement-content">
-        <h2>Personal Statement</h2>
-        <p>
-          I was born and raised in Armenia—a small country in the Near East that many people have never heard of. Before leaving Armenia, I never imagined that being a descendant of genocide survivors or witnessing a war that spanned my entire life would define me in the eyes of others. Yet, when that's all the international media mentions about Armenians, it's no surprise that people around the world associate my identity with these traumas. While these events have undeniably shaped me, they do not define the entirety of who I am.
-        </p>
-        <p>
-          The turning point in my life was being accepted to United World College Dilijan, my international high school. I moved from mandatory military camps—where we learned to march, shoot, and assemble guns—to a school for future leaders, a place dedicated to peacebuilding and uniting nations through education. UWC Dilijan's mission, "to make education a force to unite nations, people, and cultures for peace and a sustainable future," became the foundation of my worldview.
-        </p>
-        <p>
-          Studying alongside peers from more than 80 countries broadened my perspective on the world's social, economic, and political challenges. It gave me the tools to construct a narrative about Armenians—and myself—that went beyond trauma. UWC taught me to see differences not as divisions but as opportunities to learn, grow, and celebrate the richness of our diverse world.
-        </p>
-        <p>
-          At 17, I left home to attend UWC; at 19, I moved across continents to attend Cornell University on a full-ride scholarship. The combination of the Davis United World College Scholarship and Cornell's Foreign Students Scholarship has been life-changing. Yet, adapting to life in the U.S. hasn't been easy. I remember standing at the airport security line, struggling to decide whether to bring my favorite Armenian chocolates or an extra pair of shoes. Upon arrival, I had to do tasks I'd never done before—in a language I barely understood.
-        </p>
-        <p>
-          Living at an international boarding school at a young age taught me to navigate cultural differences with openness and respect. I learned from my peers' experiences and approached unfamiliar customs with curiosity. I'll never forget conversations about shared living expectations with roommates from cultures where knocking on doors wasn't customary, or the etiquette lessons from my English teacher, who explained why we should accept papers with both hands in her culture. Observing these nuances—from the way people peel mandarins to how they approach food, dating, and marriage—gave me a deeper appreciation for humanity's incredible diversity.
-        </p>
-        <p>
-          Being Armenian in the global world is both "weird" and "unsettling." How do I explain that saying, "I want to eat your liver," expresses love and affection, or that I air-dry my clothes wherever I can? How do I explain my confusion over coffee options when I've only ever drunk Armenian coffee? But it's also "different," "fresh," and "innovative." These quirks have sparked my curiosity about societal norms and inspired me to approach technology design with fresh eyes—challenging the status quo while embracing diversity.
-        </p>
-      </div>
-    </section>
-    
-
-    <!-- <section id="about" class="about">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <img src="images/lili_photo.jpg" alt="Lili Mkrtchyan's photo">
-        <p>I'm Lili, a creative thinker passionate about speculative design, hardware innovation, and impactful research. With a curious mind and a drive for exploration, I love tackling challenges and crafting meaningful solutions.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <h2>Contact Me</h2>
-      <p>Let's collaborate! Feel free to reach out through my socials or via email.</p>
-      <div class="contact-links">
-        <a href="mailto:lili@example.com" aria-label="Email Lili">Email</a>
-        <a href="https://linkedin.com/in/lili" aria-label="Visit LinkedIn">LinkedIn</a>
-        <a href="https://github.com/lili" aria-label="Visit GitHub">GitHub</a>
-      </div>
-    </section> -->
-  </main>
-</div>
+     
+    </main>
+  </div>
 
   <footer>
     <p>&copy; 2024 Lili Mkrtchyan | Designed with passion.</p>
   </footer>
 
-  <!-- Default Statcounter code for My personal website
-https://lilymkrtchyan.github.io/ -->
-<script type="text/javascript">
-  var sc_project=13069539; 
-  var sc_invisible=1; 
-  var sc_security="29d96c63"; 
+  <!-- Statcounter Analytics -->
+  <script type="text/javascript">
+    var sc_project=13069539; 
+    var sc_invisible=1; 
+    var sc_security="29d96c63"; 
   </script>
   <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js" async></script>
+    src="https://www.statcounter.com/counter/counter.js" async></script>
   <noscript><div class="statcounter"><a title="Web Analytics"
-  href="https://statcounter.com/" target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-  <!-- End of Statcounter Code -->
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 </body>
 </html>

@@ -1,128 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>More Projects</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>More Projects – Lili Mkrtchyan</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <style>
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .project-card-content {
+      padding: 20px;
+    }
+
+    .project-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      color: #222;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .iframe-section {
+      margin: 80px auto;
+      max-width: 1000px;
+      padding: 0 20px;
+    }
+
+    .iframe-section iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .navbar {
+      background: #fff;
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid #333;
+    }
+
+    .hero-center {
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+
+
+  </style>
 </head>
 <body>
   <header>
-    <!-- Add your header content here -->
-    <h1>More Projects</h1>
     <nav class="navbar" aria-label="Main navigation">
-
-        <ul>
+      <div class="nav-container">
+        <div class="logo"><a href="index.html">Lili Mkrtchyan</a></div>
+        <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="hardware.html">CubeScrub</a></li>
+          <li class="dropdown">
+            <a href="#">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="hardware.html">CubeScrub</a></li>
+              <li><a href="other.html">FringeEasy</a></li>
+              <li><a href="digital.html">Telegram LiveChat</a></li>
+              <li><a href="list_projects.html">More Projects</a></li>
+            </ul>
+          </li>
+          <li><a href="work_experience.html">Work</a></li>
           <li><a href="research.html">Research</a></li>
-          <li><a href="digital.html">Digital Product Design</a></li>
-          <li><a href="work_experience.html">Work Experience</a></li>
-          <!-- <li><a href="hobbies.html">Hobbies</a></li> -->
-          <li><a href="other.html">FringeEasy</a></li>
-          <li><a class="active" href="list_projects.html">More Projects</a></li>
         </ul>
-      </nav>
-
-      <div class="hero more-projects-hero">
-        <div class="hero-text">
-          <h1 class="tagline">More Projects</h1>
-          <p class="intro">Explore my projects that aren't listed anywhere in the website.</p>
-        </div>
       </div>
-      
+    </nav>
+    
+
+    <div class="hero">
+      <div class="hero-text hero-center">
+        <h1 class="tagline">More Projects</h1>
+        <p class="intro">Browse additional projects involving hardware, sensors, and speculative builds.</p>
+      </div>
+    </div>
   </header>
 
-  <div class="container">
   <main>
+    <section class="project-gallery">
+      <div class="project-card">
+        <img src="images/full_spider.jpeg" alt="Full Spider Automaton">
+        <div class="project-card-content">
+          <h3>3D Printed Mechanical Automaton – Spider</h3>
+          <p>Fusion 360 + 3D print. 22-part spider with functional crank-driven motion system.</p>
+        </div>
+      </div>
 
-    <div class="projects-container">
-        <!-- Spider Project -->
-        <div class="project spider-project">
-          <img src="images/full_spider.jpeg" alt="Full Spider Automaton">
-          <img src="images/half_spider.jpeg" alt="Half Spider Automaton">
-          <h3>3D Printed Mechanical Automaton - Spider</h3>
-          <p>3D Printed mechanical automaton of a spider using 22 moving parts designed using Fusion 360 and 3D printed by myself.</p>
+      <div class="project-card">
+        <img src="images/lidar_new.png" alt="Lidar Project">
+        <div class="project-card-content">
+          <h3>Lidar Sensor</h3>
+          <p>IR sensor and stepper motor simulate LIDAR with Java SONAR software for visualization.</p>
         </div>
-      
-        <!-- Lidar Project -->
-        <div class="project lidar-project">
-          <img src="images/lidar_new.png" alt="Lidar Project">
-          <h3>Lidar</h3>
-          <p>Creating a "Lidar" project using an IR Range Sensor and Stepper Motor. Data visualized by java-based software SONAR.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/magnetometer_new.png" alt="Magnetometer">
+        <div class="project-card-content">
+          <h3>Magnetometer + LCD</h3>
+          <p>SPI-based LIS3MDL outputs real-time 3D magnetic readings displayed on LCD.</p>
         </div>
-      
-        <!-- Other Projects -->
-        <div class="project">
-          <img src="images/magnetometer_new.png" alt="Magnetometer + LCD Display">
-          <h3>Magnetometer + LCD Display</h3>
-          <p>LIS3MDL provides 3D magnetic field data. Communicates with a magnetometer via SPI protocol. Shows the readings on the LCD.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/temp_sensor_new.png" alt="Temperature Sensor">
+        <div class="project-card-content">
+          <h3>Temperature Sensor</h3>
+          <p>I2C-connected TC74 sensor sends readings to LCD in a compact thermometer setup.</p>
         </div>
-        <div class="project">
-          <img src="images/temp_sensor_new.png" alt="Temperature Sensor + LCD Display">
-          <h3>Temperature Sensor + LCD Display</h3>
-          <p>Built an LCD thermometer. Reads the temperature from the TC74. Displays the temperature on LCD display. Communicates via I2C protocol.</p>
+      </div>
+
+      <div class="project-card">
+        <img src="images/locker_project_card_image.png" alt="Locker Project">
+        <div class="project-card-content">
+          <h3>Rotary Encoder Locker</h3>
+          <p>Uses rotary input to unlock with LED & buzzer feedback. Stepper motor reveals storage.</p>
         </div>
-        <div class="project">
-          <img src="images/locker_project_card_image.png" alt="Locker">
-          <h3>Locker</h3>
-          <p>It uses a rotary encoder to register the passcode to the locker. It utilizes sound and LED light to indicate if the passcode was correct or not. After the correct passcode is inputted, the stepper motor opens the locker.</p>
-        </div>
-        <div class="project">
-          <img src="images/jack_in_box.png" alt="Jack in the Box">
+      </div>
+
+      <div class="project-card">
+        <img src="images/jack_in_box.png" alt="Jack in the Box">
+        <div class="project-card-content">
           <h3>Jack in the Box</h3>
-          <p>Laser cut the box and the clown. The clown jumps out when the photoresistor sensor registers that the lights are off. The clown moves upward supported by a 3D printed gear and pinion system attached to a servo motor.</p>
+          <p>Photoresistor triggers clown launch using servo + 3D printed gear/pinion system.</p>
         </div>
-        <div class="project">
-          <img src="images/animated_steam_engine_new.png" alt="Animated Steam Engine">
+      </div>
+
+      <div class="project-card">
+        <img src="images/animated_steam_engine_new.png" alt="Steam Engine">
+        <div class="project-card-content">
           <h3>Animated Steam Engine</h3>
-          <p>Bidirectional Motor Control. Using the tracking sensor to sense the rotation of the wheel. Changes the direction after the wheel rotates for one circle each time. Pauses for 5 seconds in between.</p>
-        </div>
-        <div class="project">
-          <img src="images/advanced_io_new.png" alt="Advanced IO">
-          <h3>Advanced IO</h3>
-          <p>Using the MPU6050 and the LCD display, built a level that moves a dot back and forth on the screen based on one axis of the accelerometer.</p>
+          <p>Bidirectional motor + tracker sensor simulates working piston & wheel cycle.</p>
         </div>
       </div>
-      
-      
-      <div class="embedded-section-virtual-academy">
-        <h2>Newfield Virtual Academy</h2>
-        <p>Explore the Newfield Virtual Academy project which I was the team leader for, which addresses the challenges in public school education and provides innovative solutions to reduce dropout rates.</p>
-    
-        <iframe 
-          src="https://blogs.cornell.edu/designthinkingcommunityfall24/newfield-virtual-academy/" 
-          title="Newfield Virtual Academy" 
-          width="100%" 
-          height="600px" 
-          frameborder="0" 
-          style="border: 1px solid #ccc; border-radius: 8px; margin-top: 20px;"
-          allowfullscreen>
-        </iframe>
+
+      <div class="project-card">
+        <img src="images/advanced_io_new.png" alt="Accelerometer Project">
+        <div class="project-card-content">
+          <h3>Accelerometer Level</h3>
+          <p>Real-time accelerometer (MPU6050) controls dot on screen to show tilt.</p>
+        </div>
       </div>
-      
+    </section>
+
+    <section class="iframe-section">
+      <h2>Newfield Virtual Academy</h2>
+      <p>Led the design of a virtual high school platform addressing dropout challenges. Merged UI/UX thinking with educational systems design.</p>
+      <iframe 
+        src="https://blogs.cornell.edu/designthinkingcommunityfall24/newfield-virtual-academy/" 
+        title="Newfield Virtual Academy">
+      </iframe>
+    </section>
   </main>
-</div>
 
   <footer>
-    <p>&copy; 2024 Lili Mkrtchyan | Designed with passion.</p>
+    <p>&copy; 2025 Lili Mkrtchyan | Designed with passion.</p>
   </footer>
 
-   <!-- Default Statcounter code for My personal websit https://lilymkrtchyan.github.io/ -->
-<script type="text/javascript">
-    var sc_project=13069539; 
-    var sc_invisible=1; 
-    var sc_security="29d96c63"; 
-    </script>
-    <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
-    <noscript><div class="statcounter"><a title="Web Analytics"
-    href="https://statcounter.com/" target="_blank"><img class="statcounter"
-    src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
-    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-    <!-- End of Statcounter Code -->
-
-
+  <!-- Analytics -->
+  <script type="text/javascript">
+    var sc_project = 13069539;
+    var sc_invisible = 1;
+    var sc_security = "29d96c63";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript><div class="statcounter">
+    <a title="Web Analytics" href="https://statcounter.com/" target="_blank">
+      <img class="statcounter" src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"/>
+    </a>
+  </div></noscript>
 </body>
 </html>

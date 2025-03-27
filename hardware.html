@@ -4,19 +4,254 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hardware Projects - Lili Mkrtchyan</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles2.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .hardware-page .project-section,
+    .hardware-page .gallery,
+    .hardware-page .reflection {
+      margin-bottom: 60px;
+    }
+
+    h2, h3, h4, h5 {
+      margin-top: 40px;
+      margin-bottom: 16px;
+      color: #222;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .iteration-row {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .iteration {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .iteration-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      margin: 16px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .gallery-image, .embedded-video {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    iframe {
+      max-width: 100%;
+    }
+
+    .highlighted-announcement {
+      background-color: #fff3cd;
+      border-left: 6px solid #ffecb5;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer {
+      padding: 30px 20px;
+      text-align: center;
+      background: #f1f1f1;
+      margin-top: 80px;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: #fff;
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid #333;
+    }
+
+    .main-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .video-container,
+    .section-container {
+      margin: 40px 0;
+    }
+
+    .video-container iframe,
+    iframe,
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .section-container h2, .section-container h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .section-container p {
+      line-height: 1.6;
+      margin-bottom: 16px;
+      color: #444;
+    }
+
+    .highlight-section {
+      background: #f9f9f9;
+      padding: 60px 20px;
+      border-radius: 12px;
+    }
+
+    .midfi-prototype {
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .midfi-prototype img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .highfi-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin: 40px 0;
+    }
+
+    .highfi-image {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+      background: #fafafa;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+
+  </style>
 </head>
 <body>
-  <header class="hardware-page">
+
+  
+  <!-- <header class="hardware-page">
     <nav class="navbar" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a class="active" href="hardware.html">CubeScrub</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="digital.html">Digital Product Design</a></li>
-        <li><a href="work_experience.html">Work Experience</a></li>
+        <li><a href="work_experience.html">Work Experience</a></li> -->
         <!-- <li><a href="hobbies.html">Hobbies</a></li> -->
-        <li><a href="other.html">FringeEasy</a></li>
+        <!-- <li><a href="other.html">FringeEasy</a></li>
         <li><a href="list_projects.html">More Projects</a></li>
       </ul>
     </nav>
@@ -27,33 +262,72 @@
         <p class="intro">Explore my projects that involve hands-on hardware design, circuit building, and prototyping.</p>
       </div>
     </div>
-  </header>
+  </header> -->
+
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">Lili Mkrtchyan</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="hardware.html">CubeScrub</a></li>
+            <li><a href="other.html">FringeEasy</a></li>
+            <li><a href="digital.html">Telegram LiveChat</a></li>
+            <li><a href="list_projects.html">More Projects</a></li>
+          </ul>
+        </li>
+        <li><a href="work_experience.html">Work</a></li>
+        <li><a href="research.html">Research</a></li>
+      </ul>
+    </div>
+  </nav>
+
 
   <div class="container">
   <main>
     <div class="content hardware-page">
-      <h2>Featured Hardware Projects</h2>
-      <p>Here are some of my recent hardware projects, showcasing my experience with different technologies and design approaches.</p>
+      <h2>CubeScrub</h2>
+     
 
       <!-- CubeScrub Section -->
       <section id="cubescrub" class="project">
-        <h3>CubeScrub: A Cartesian Robot for Cleaning Flat Surfaces</h3>
+        <h3>CubeScrub: A Cartesian Robot for Cleaning Curved and Flat Dishes</h3>
         <p>
           CubeScrub is a Cartesian robot designed to move along three axes (X, Y, Z) to effectively clean flat surfaces. Below is a detailed overview of its development, from concept to implementation.
         </p>
 
        
         </div>
+
+
+              <!-- Embedded YouTube Shorts Video -->
+  <section id="featured-video">
+    <h3>CubeScrub At the Science Center</h3>
+    <p>We demonstrated our final prototype of CubeScrub at the Ithaca Science Center!</p>
+    <div style="text-align: center;">
+      <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/3CrMVV7PSYg" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
             
         
         <!-- Previous Work and Objectives -->
-        <div class="project-section cubescrub-section">
-          <h4>CubeScrub: Previous Work and Objectives</h4>
-          <p>
-            CubeScrub was inspired by existing Cartesian robot systems and automated cleaning devices. The goal was to design a modular, efficient, and user-friendly cleaning robot that could be intuitively controlled while maintaining stability and flexibility for various cleaning tasks.
-          </p>
-          <div class="embedded-content" style="text-align: center;">
-            <object 
+          <section id="design-comparison" class="project-section cubescrub-section">
+            <h4>CubeScrub: Previous Work and Objectives</h4>
+            <p>
+              CubeScrub was inspired by existing Cartesian robot systems and automated cleaning devices. The goal was to design a modular, efficient, and user-friendly cleaning robot that could be intuitively controlled while maintaining stability and flexibility for various cleaning tasks.
+            </p>
+            <div class="embedded-content" style="text-align: center;">
+              <object 
               class="pdf" 
               data="files/previous_work_objectives.pdf" 
               type="application/pdf"
@@ -62,8 +336,8 @@
               Your browser does not support PDFs. Please download the file to view it: 
               <a href="files/previous_work_objectives.pdf">Download PDF</a>
             </object>
-          </div>
-        </div>
+            </div>
+          </section>
 
         <!-- Design Iterations -->
         <div class="project-section cubescrub-section">
@@ -220,7 +494,7 @@
 
         <!-- Embedded YouTube Shorts Video -->
   <section id="featured-video">
-    <h3>CubeScrub First Prototype Demonstration</h3>
+    <h4>CubeScrub First Prototype Demonstration</h4>
     <p>Our first prototype showcases the basic working functions of the CubeScrub. Moving forward we will ensure a more presentable and polished machine for the final demonstration.</p>
     <div style="text-align: center;">
       <iframe 
@@ -235,20 +509,12 @@
     </div>
   </section>
 
-        <!-- Final Prototype Announcement -->
-        <section id="final-prototype" class="highlighted-announcement">
-          <h4>✨ Exciting Announcement ✨</h4>
-          <p>
-            The <strong>final prototype</strong> of CubeScrub will be showcased on <strong>December 14</strong> at <strong>The Ithaca Science Center</strong>!
-          </p>
-          <p>
-            Come see CubeScrub in action and learn more about its innovative design and development process.
-          </p>
-        </section>
-      </section>
-    </div>
+  <section class="project-section cubescrub-section">
+    <h4>Final Prototype Demonstration</h4>
+  
 
     <div class="gallery">
+     
       <!-- Embedded YouTube Shorts Video -->
       <iframe 
         class="embedded-video" 
@@ -293,8 +559,10 @@
       alt="Overall View of CubeScrub">
       </div>
 
-      <section id="reflection" class="reflection">
-        <h2>Reflection and Personal Contribution</h2>
+    </section>
+
+      <section id="reflection" class="project-section cubescrub-section">
+        <h4>Reflection and Personal Contribution</h4>
         <p>
           Throughout this process, I gained invaluable experience in executing a project from the design phase to wiring, testing, and showcasing a fully functioning machine. I developed practical skills in assembling objects, including learning to use drills and screwdrivers to construct the box with aluminum extruders. Additionally, I mastered mechanisms such as belts and pulleys, as well as gear racks and pinions, by integrating them into the system for three-directional movement.
         </p>
@@ -311,6 +579,9 @@
   <footer class="hardware-page footer">
     <p>&copy; 2024 Lili Mkrtchyan | Designed with passion.</p>
   </footer>
+
+
+  
 
   <!-- Default Statcounter code for My personal website
 https://lilymkrtchyan.github.io/ -->

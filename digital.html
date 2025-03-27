@@ -1,525 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Product Design - Telegram LiveChat</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telegram LiveChat – Lili Mkrtchyan</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: #fff;
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid #333;
+    }
+
+    .main-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .video-container,
+    .section-container {
+      margin: 40px 0;
+    }
+
+    .video-container iframe,
+    iframe,
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .section-container h2, .section-container h3 {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .section-container p {
+      line-height: 1.6;
+      margin-bottom: 16px;
+      color: #444;
+    }
+
+    .highlight-section {
+      background: #f9f9f9;
+      padding: 60px 20px;
+      border-radius: 12px;
+    }
+
+    .midfi-prototype {
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .midfi-prototype img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .highfi-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin: 40px 0;
+    }
+
+    .highfi-image {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+      background: #fafafa;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+  </style>
 </head>
+
 <body>
-  <header class="digital-page">
-    <nav class="navbar" aria-label="Main navigation">
-      <ul>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">Lili Mkrtchyan</a></div>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="hardware.html">CubeScrub</a></li>
+        <li class="dropdown">
+          <a href="#">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="hardware.html">CubeScrub</a></li>
+            <li><a href="other.html">FringeEasy</a></li>
+            <li><a href="digital.html">Telegram LiveChat</a></li>
+            <li><a href="list_projects.html">More Projects</a></li>
+          </ul>
+        </li>
+        <li><a href="work_experience.html">Work</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a class="active" href="digital.html">Digital Product Design</a></li>
-        <li><a href="work_experience.html">Work Experience</a></li>
-        <!-- <li><a href="hobbies.html">Hobbies</a></li> -->
-        <li><a href="other.html">FringeEasy</a></li>
-        <li><a href="list_projects.html">More Projects</a></li>
       </ul>
-    </nav>
-    
-    <div class="hero digital-hero">
-      <div class="hero-text">
-        <h1 class="tagline">Telegram LiveChat</h1>
-        <p class="intro">A user-centric, real-time messaging feature designed to bring transparency and engagement to Telegram chats.</p>
-      </div>
     </div>
-  </header>
+  </nav>
 
-  <div class="container">
-  <main>
-    <div class="content digital-page">
-      <h2>Telegram LiveChat: Case Study</h2>
-      <p>
-        Telegram LiveChat is a feature designed to enable real-time transparency and interaction in conversations by showing what the other user is typing in real time. It combines innovation with user research to create a feature that addresses the lack of personalization and transparency in traditional messaging apps.
-      </p>
-
-      <section class="video-section">
-        <div class="video-container">
-          <iframe 
-            width="560" 
-            height="315" 
-            src="https://www.youtube.com/embed/O-l8pCmbs4c" 
-            title="Telegram Live Chat Video Demo" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </section>
-      
-
-      <!-- User Research -->
-      <section class="project-section">
-        <h3>User Research and Problem Analysis</h3>
-        <p>
-          During the research phase, we identified two primary challenges:
-        </p>
-        <ul>
-          <li>The lack of self-expression and personalization features in messaging apps.</li>
-          <li>The lack of transparency between users during conversations.</li>
-        </ul>
-        <div class="project-media">
-          <h4>Brainstorming Solutions</h4>
-          <div class="centered-image">
-            <img src="images/Solution-Brainstorm.png" alt="Solution Brainstorming">
-          </div>
-          <p class="image-caption">Brainstorming solutions to enhance transparency and personalization in Telegram.</p>
-        </div>
-      </section>
-
-      <!-- Feature Prioritization -->
-      <section class="project-section">
-        <h3>Feature Prioritization</h3>
-        <p>
-          To decide which solutions to prioritize, we used an impact-effort matrix to evaluate feasibility and potential impact. This process helped us focus on high-impact and feasible solutions, like LiveChat.
-        </p>
-        <div class="project-media">
-          <h4>Impact-Effort Matrix</h4>
-          <div class="centered-image">
-            <img src="images/Impact-effort-matrix.png" alt="Impact-Effort Matrix">
-          </div>
-          <p class="image-caption">The impact-effort matrix shows how LiveChat emerged as a high-priority solution.</p>
-        </div>
-      </section>
-
-      <!-- Low-Fidelity Prototypes -->
-      <section class="project-section">
-        <h3>Low-Fidelity Prototypes</h3>
-        <p>Below are the low-fidelity prototypes for the "Stories," "Live Chat," and "Emoji Mood" features:</p>
-
-        <div class="prototype-gallery">
-          <div class="prototype-item">
-            <h4>Stories</h4>
-            <img src="images/Story-low-fidelity _230118_060318.jpg" alt="Stories Low-Fidelity Prototype" class="prototype-image">
-          </div>
-          <div class="prototype-item">
-            <h4>Live Chat</h4>
-            <img src="images/Live-chat-low-fidelity _230118_060653.jpg" alt="Live Chat Low-Fidelity Prototype" class="prototype-image">
-          </div>
-          <div class="prototype-item">
-            <h4>Emoji Mood</h4>
-            <img src="images/Emoji-mood-low-fidelity _230118_060522.jpg" alt="Emoji Mood Low-Fidelity Prototype" class="prototype-image">
-          </div>
-        </div>
-      </section>
-
-      
-
-      <!-- Emoji Moodboard Mid-Fidelity Prototype -->
-      <section class="project-section">
-        <h3>Emoji Moodboard: Mid-Fidelity Prototype</h3>
-        <p>
-          The Emoji Moodboard feature lets users share their current mood through emojis while chatting. Below is the mid-fidelity prototype showcasing how users can select emojis, view their mood history, and display their emoji mood in their profile.
-        </p>
-        <div class="prototype-gallery">
-          <div class="prototype-item">
-            <img src="images/emoji_moodboard.webp" alt="Emoji Moodboard Mid-Fidelity Prototype" class="prototype-image smaller-image">
-          </div>
-        </div>
-      </section>
-
-      <h4>SWOT Analysis</h4>
-      <table class="swot-table">
-        <thead>
-          <tr>
-            <th>S</th>
-            <th>W</th>
-            <th>O</th>
-            <th>T</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Allows the user to express their feelings, emotions, and individuality.</td>
-            <td>There are limited options of emojis that may not convey the whole range of the user’s feelings and emotions.</td>
-            <td>Sometimes it is hard to tell how you feel through a text because you don’t know what to say, how to say, or what reaction to expect. Hence emoji is an easier way to convey feelings without taking the direct responsibility of talking to other people about your feelings.</td>
-            <td>There are other mood tracking software applications that specialize at this.</td>
-          </tr>
-          <tr>
-            <td>Allows the user to track their mood and to look back at their mood record through a mood-board.</td>
-            <td>Mood tracking is not the primary purpose of Telegram, however it can start a conversation.</td>
-            <td>People are interested in data about themselves, hence they would use the feature and look at the emoji mood board. In the future, we might also create wraps (like Spotify does) and draw associations with all the factors and conversations that made the user happy or sad, and we can show them their mood and their notes from a year ago (like Google photos does).</td>
-            <td>Emojis might replace human interaction and conversation.</td>
-          </tr>
-          <tr>
-            <td>As a user you can understand other user’s feelings before reaching out to them.</td>
-            <td>Discourages direct communication and opens a room for misunderstanding and prejudice.</td>
-            <td>As a user you can be conscious when you see someone is grieving and can be supportive. Alternatively, as a user you can wait until the user has a positive mood to talk to them to ensure the best possible conversation.</td>
-            <td>Can take away the main purpose of the app.</td>
-          </tr>
-          <tr>
-            <td>Increases transparency between users.</td>
-            <td></td>
-            <td>Users can support each other based on their displayed emojis and can start a conversation if they need a clarification or if they are curious.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Easy to use.</td>
-            <td></td>
-            <td>Users tend to use the features that are easy to use. Choosing one emoji each day is fairly easy to use, hence the impact that it will leave on the user experience is immense.</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+  <main class="main-wrapper">
+    <section class="hero-section">
+      <h1 class="hero-title">Telegram LiveChat</h1>
+      <p class="hero-subtitle">Designing a transparent, real-time messaging experience.</p>
     </section>
 
-    <!-- Telegram LiveChat Mid-Fidelity Prototype -->
-<section class="project-section">
-    <h3>Telegram LiveChat: Mid-Fidelity Prototype</h3>
-    <p>
-      The Telegram LiveChat mid-fidelity prototype demonstrates the real-time messaging feature, showcasing how users can view each other's typing in progress. This feature brings a new layer of transparency and engagement to conversations.
-    </p>
-    <div class="prototype-gallery">
-      <div class="prototype-item">
-        <img src="images/livecgat_mid_fidelity.webp" alt="Telegram LiveChat Mid-Fidelity Prototype" class="prototype-image smaller-image">
-      </div>
-    </div>
-  </section>
+    <section class="video-container">
+      <iframe height="450" src="https://www.youtube.com/embed/O-l8pCmbs4c" frameborder="0" allowfullscreen></iframe>
+    </section>
 
-  
-  <!-- SWOT Analysis for Telegram LiveChat -->
-  <h4>SWOT Analysis</h4>
-  <table class="swot-table">
-    <thead>
-      <tr>
-        <th>S</th>
-        <th>W</th>
-        <th>O</th>
-        <th>T</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Has two modes: the usual mode and the live chat. Accommodates for both groups of people. Additionally, the feature works only when both (or all) members of the chat have it on (like the active feature).</td>
-        <td>By leaving the usual mode as an option we are risking people not trying out the live chat as they are already used to the usual mode.</td>
-        <td>Users are interested to see what the other user is typing for so long or deleting and never sending in the usual mode; hence, they will try out the new feature at least once.</td>
-        <td>There are user groups that would never turn the feature on, such as people who overthink and edit their messages several times, people who send sensitive and important messages, or people who use Telegram as a platform for formal communication.</td>
-      </tr>
-      <tr>
-        <td>Opens up a space for new formats of communication. Users can live chat each other when having a debate or a discussion. Users can also live chat while brainstorming or interviewing.</td>
-        <td>Users may send long messages and never save or “complete” them, having essays instead of a discussion. If the users are too concentrated on their own message, they would not read the other users’ messages.</td>
-        <td>Text interviewing might become an option for people who have jobs related to typing, writing, and editing. Other types of interviews might request the user to write down their thoughts to see their flow of thinking.</td>
-        <td>Users can prepare their “perfect” messages beforehand and input them from somewhere else as they type. This way they would not edit or change anything and they would not be honest and transparent.</td>
-      </tr>
-      <tr>
-        <td>Users can live chat each other instead of video-calling or audio-calling when they want to talk in real time but cannot speak or listen.</td>
-        <td>If the users type fast, this will be no different than usual texting.</td>
-        <td>Live chatting can allow photos to replace the experience of seeing each other in a video call.</td>
-        <td>Users have to “complete” their real-time messages in order to move on and have a conversation, instead of two long messages.</td>
-      </tr>
-      <tr>
-        <td>Allows users to see each others’ flow of thoughts and to better understand each other.</td>
-        <td>If the users are bad at messaging or writing in general, it can get confusing and irritating to watch the other user struggle in real time.</td>
-        <td>As the live chat allows both users to see each other's messages (even incomplete and unfinished ones) and type simultaneously, the other user can guide and lead the conversation as opposed to sitting and waiting for a message in a regular mode.</td>
-        <td>If users who communicate in foreign languages see making spelling and grammar mistakes as a threat and embarrassment, they would not use the feature and would be excluded.</td>
-      </tr>
-      <tr>
-        <td>Increases transparency. By watching each other type in real time, users will know exactly what the other user is thinking.</td>
-        <td>Users’ spelling and grammatical mistakes will be immediately seen. Users won’t have the chance to double-check themselves or run their messages by checking websites. This is especially unfair to the users who do not communicate in their native language and have to check words and phrases in a foreign language.</td>
-        <td>Users will have the chance to get to know the real users. Furthermore, authentic relationships that will form as a result of this feature will weigh more in the eyes of the users than grammar and spelling mistakes.</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  <!-- Telegram Story: Mid-Fidelity Prototype -->
-<section class="project-section">
-    <h3>Telegram Story: Mid-Fidelity Prototype</h3>
-    <p>
-      The Telegram Story feature allows users to share moments from their lives via temporary photos and videos. Below is the mid-fidelity prototype that demonstrates the workflow of adding a story, previewing it, and interacting with it in Telegram.
-    </p>
-    <div class="prototype-gallery">
-      <div class="prototype-item">
-        <img src="images/story_mid_fidelity.webp" alt="Telegram Story Mid-Fidelity Prototype" class="prototype-image smaller-image">
-      </div>
-    </div>
-  </section>
+    <section class="section-container">
+      <h2>Overview</h2>
+      <p>Telegram LiveChat enables users to see each other's messages as they are typed, introducing a new layer of transparency and immediacy to digital conversations. This case study explores how user research, prototyping, and UI design came together to shape the feature.</p>
+    </section>
 
-  <section class="project-section">
-    <h3>SWOT Analysis: Telegram Story</h3>
-    <table class="swot-table">
-      <thead>
-        <tr>
-          <th>S</th>
-          <th>W</th>
-          <th>O</th>
-          <th>T</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Increases engagement among users. Engagement can look like a curiosity among users to check each others’ stories and to start a conversation about the stories.</td>
-          <td>Is not different from any of the other platforms that use stories to increase engagement, hence people who are not already a Telegram user may not find this feature special enough to switch to Telegram.</td>
-          <td>More people would use Telegram given they are interested in other people’s updates and lives.</td>
-          <td>Telegram would lose its brand and identity as this feature reminds of Meta platforms and specifically Messenger and Instagram stories.</td>
-        </tr>
-        <tr>
-          <td>Keeps the users in touch even if they don’t directly communicate.</td>
-          <td>Discourages the direct messaging which is the main purpose of Telegram.</td>
-          <td>Creates topics for a dialogue for people who want to talk to each other but who don’t know what to talk about or how to start a conversation. After a successful launch of the feature, Telegram can create more distinguishable features that will differentiate Telegram from all the other platform stories.</td>
-          <td>Users prefer real-time and unfiltered images and videos for transparency. Not ensuring that, as we allow uploading any photo from the gallery, is a threat that users might not appreciate the transparency.</td>
-        </tr>
-        <tr>
-          <td>Increases transparency by showing what is going on during the user’s day.</td>
-          <td>Unlike BeReal, for example, where the user shows a real moment at a randomized time, the user decides what to display here. Hence, even though it is more transparent than without this feature, it is not highly transparent as the user can still post whatever they want.</td>
-          <td>To create a more transparent experience, we can allow only photos and videos that are taken in real time with the camera feature (and nothing from the gallery).</td>
-          <td>Because they require more time and dedication and last so short, people might be discouraged to use the feature. Especially given that sharing photos and videos is not the primary reason for Telegram.</td>
-        </tr>
-        <tr>
-          <td>The stories are temporary. The story material can be everything that the user wants other people to see but doesn’t want to have on their account for a longer time, such as profile pictures that are supposed to last longer.</td>
-          <td>Requires dedication and preparation. Making stories requires the user to capture the story material and put that on Telegram (optionally adding aesthetics).</td>
-          <td>If users see the outcomes of the feature, more users will start creating stories, and others would check on each others’ profiles because of that.</td>
-          <td>Because they require more time and dedication and last so short, people might be discouraged to use the feature. Especially given that sharing photos and videos is not the primary reason for Telegram.</td>
-        </tr>
-        <tr>
-          <td>Because of its temporary nature, not everyone can see the stories.</td>
-          <td></td>
-          <td>More features such as photo-yearbook and story warm-ups can be created to remind the users of their stories.</td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+    <section class="section-container">
+      <h2>User Research Insights</h2>
+      <p>We identified gaps in personalization and transparency in messaging platforms. Users expressed a desire for more expressive and real-time interactions.</p>
+      <img src="images/Solution-Brainstorm.png" alt="Brainstorm Diagram" />
+    </section>
 
-  <section class="project-section live-chat-highlight">
-    <h3>Why Live Chat is the Optimal Choice</h3>
-    <p>
-      In our journey to innovate Telegram's messaging experience, we evaluated three potential features — 
-      <strong>Emoji Moodboard</strong>, <strong>Telegram Stories</strong>, and <strong>Live Chat</strong>. 
-      After an in-depth analysis and prototyping process, we chose to proceed with Live Chat as the feature 
-      that most effectively addresses user needs and sets Telegram apart in the competitive messaging landscape.
-    </p>
-  
-    <div class="feature-highlights">
-      <div class="highlight-card">
-        <h4>Addressing User Pain Points</h4>
-        <p><strong>Texting-induced anxiety:</strong> Many users experience stress from typing indicators ("bubbles") and the ambiguity of waiting for a response or deleted messages.</p>
-        <p><strong>Lack of engagement:</strong> Users desire a more dynamic and interactive way to communicate, resembling in-person interactions.</p>
+    <section class="section-container">
+      <h2>Prototyping the Experience</h2>
+      <p>Low and mid-fidelity prototypes helped us test ideas quickly. We explored emoji moodboards, live chat, and story formats.</p>
+      <div class="gallery-grid">
+        <img src="images/Story-low-fidelity _230118_060318.jpg" alt="Story Prototype" />
+        <img src="images/Live-chat-low-fidelity _230118_060653.jpg" alt="LiveChat Prototype" />
+        <img src="images/Emoji-mood-low-fidelity _230118_060522.jpg" alt="Emoji Mood Prototype" />
       </div>
-  
-      <div class="highlight-card">
-        <h4>Differentiation from Competitors</h4>
-        <p>Live Chat redefines messaging by enabling users to see what the other person is typing in real time, offering a unique communication experience that:</p>
-        <ul>
-          <li>Alleviates texting-induced anxiety by showing the flow of thoughts during messaging.</li>
-          <li>Engages users in a completely new way.</li>
-          <li>Reinforces Telegram's identity as a platform that prioritizes innovation and authenticity.</li>
-        </ul>
-      </div>
-    </div>
-  
-    <!-- <div class="highlighted-announcement live-chat-banner">
-      <h4>Live Chat: Redefining Messaging for a Transparent Future</h4>
-      <p>
-        With Live Chat, Telegram offers its users a groundbreaking way to communicate, 
-        setting itself apart from competitors and addressing the fundamental needs of modern messaging.
-      </p>
-    </div> -->
-  
-    <div class="feature-highlights">
-      <div class="highlight-card">
-        <h4>Enhancing Transparency and Engagement</h4>
-        <ul>
-          <li><strong>Reduce ambiguity:</strong> By revealing unfiltered thoughts and typing processes, users can better understand one another.</li>
-          <li><strong>Foster authenticity:</strong> Real-time interactions create more genuine relationships.</li>
-          <li><strong>Boost engagement:</strong> Users can respond dynamically during a conversation, as if they were face-to-face.</li>
-        </ul>
-      </div>
-  
-      <div class="highlight-card">
-        <h4>Future Potential of Live Chat</h4>
-        <ul>
-          <li>Integration with <strong>real-time collaboration</strong> tools for professional use.</li>
-          <li>Expansion into multimedia interactions, like real-time video or photo editing.</li>
-          <li>Analytics to provide insights into communication patterns.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="project-section high-fidelity">
-    <h3>High-Fidelity Prototyping: Live Chat Implementation</h3>
-    <p>
-      The Live Chat feature introduces innovative user flows to make real-time communication seamless and transparent. Below are the detailed flows for different scenarios, presented in a concise table format:
-    </p>
-  
-    <table class="user-flow-table">
-      <thead>
-        <tr>
-          <th>User Flow</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Chats → A specific chat → The other user typing</td>
-          <td>Observe another user typing in real time, showing their thought process and enhancing the transparency of conversations.</td>
-        </tr>
-        <tr>
-          <td>Chats → A specific chat → You, as the user, typing</td>
-          <td>Your typing actions are visible, allowing the other user to see your thought process and reply in real time.</td>
-        </tr>
-        <tr>
-          <td>Chats → A specific chat → Both you and the other user typing</td>
-          <td>Both users type simultaneously, creating an interactive experience akin to a real-time conversation.</td>
-        </tr>
-        <tr>
-          <td>Chats → Menu → Settings → Chat settings → Activate live chat</td>
-          <td>Users can activate or deactivate Live Chat through the settings menu, offering flexibility based on individual preferences.</td>
-        </tr>
-        <tr>
-          <td>Chats → Menu → Create a new group → Add the group members → Chats → Different (all) users typing</td>
-          <td>Supports group chats where multiple users engage in live typing simultaneously, fostering collaborative discussions.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-  
-  <section class="project-section ui-kit">
-    <h3>Telegram UI Kit</h3>
-    <p>
-      The UI Kit for Telegram Live Chat showcases the visual elements, typography, colors, and spacing standards that guide the design of this feature. Below is the comprehensive UI Kit used to maintain consistency and intuitiveness throughout the application:
-    </p>
-    <div class="centered-image">
-      <img src="images/ui_kit.webp" alt="Telegram UI Kit" class="ui-kit-image">
-    </div>
-    <p class="image-caption">
-      The UI Kit includes a defined color palette, typography hierarchy, spacing guidelines, and reusable components like buttons, icons, and switches.
-    </p>
-  </section>
+    <section class="section-container">
+      <h2>Mid-Fidelity Prototypes</h2>
 
-  <section class="project-section questions-considered">
-    <h3>Questions Considered</h3>
-    <p>
-      During the development of Telegram Live Chat, we carefully examined the following critical questions to ensure an intuitive and engaging user experience:
-    </p>
-    <ul class="questions-list">
-      <li>How would the other user’s typing look like?</li>
-      <li>How would my, as the user’s, typing look like?</li>
-      <li>How to indicate that the message is complete?</li>
-      <li>How to turn on and off the feature button would look like?</li>
-    </ul>
-  </section>
-  
-  <section class="project-section live-chat-activation">
-    <h3>How Would Activating the Live Chat Look Like?</h3>
-    <p>
-      The route: <strong>Menu → Settings → Chat Settings → Live Chat (On)</strong>
-    </p>
-    <div class="activation-gallery">
-      <img src="images/activation.webp" alt="Live Chat Activation" class="activation-image">
-    </div>
-    <p>
-      The Live Chat activation switch would be within the settings as it is related to other settings of the chat within the information hierarchy. 
-      The user would switch the Live Chat switch from “off” condition to “On” condition. The switch looks and functions identical to all the other buttons related to 
-      similar settings within the information hierarchy, hence there should be no confusion as to how to use it.
-    </p>
-  </section>
+      <div class="midfi-prototype">
+        <h3>Live Chat</h3>
+        <img src="images/livecgat_mid_fidelity.webp" alt="Live Chat Mid-Fi Prototype">
+      </div>
 
-  <section class="project-section typing-box">
-    <h3>How Does The Typing Box Look Like For Us?</h3>
-    <div class="typing-box-container">
-      <div class="typing-box-text-left">
-        <h4>VERSION 1:</h4>
-        <p>
-          In this version we, the user, type <strong>Ok</strong> as the other user is typing their message. 
-          This is a very unique function of this message, as the user — we — can see/reply to the other user’s message even if that message is yet incomplete. 
-          In this variation of typing we explore the visual appearance of our typing box. Namely, unlike the typing box of the other user, the typing box for us, as the user, 
-          is not changed from the original Telegram feature (when Live Chat is off).
-        </p>
+      <div class="midfi-prototype">
+        <h3>Emoji Moodboard</h3>
+        <img src="images/emoji_moodboard.webp" alt="Emoji Moodboard Mid-Fi Prototype">
       </div>
-      <div class="typing-box-image-container">
-        <img src="images/typing_box_versions.webp" alt="Typing Box Versions" class="typing-box-image">
-      </div>
-      <div class="typing-box-text-right">
-        <h4>VERSION 2:</h4>
-        <p>
-          In the second variation of the visual exploration of the typing box, we explore the typing box that looks identical to what the other user is seeing 
-          (typing in process).
-        </p>
-      </div>
-    </div>
-    <div class="typing-box-choice">
-      <h4>THE CHOICE:</h4>
-      <p>
-        I think that the second version of the typing box is more suitable for the feature as it displays exactly how the user on the other side of the conversation 
-        would see the typing. It avoids the confusion that may occur with the traditional typing box and it shows the typing user exactly what the other person is seeing.
-      </p>
-    </div>
-  </section>
-  
-  <section class="project-section message-complete">
-    <h3>What Would Indicate That The Message Is Complete?</h3>
-    <div class="message-complete-container">
-      <div class="message-complete-text">
-        <p>
-          In the original Telegram messaging, there are two ticks, one indicating that the message is delivered, and the second one indicating that the message was read. 
-          This, however, would not work for the Live Chat as the user might read half of the message only (if they see the message in the process) and not see all of it. 
-          There also needs to be a clarification of when the message is complete so the user knows that the thought is complete and that they can reply to a complete message. 
-          For these two reasons, I have designed a message layout that lights up when the message is complete (when the user presses enter). 
-          The Enter key in the traditional Telegram messaging sends the message to the chat, however, in the Live Chat it completes the message.
-        </p>
-      </div>
-      <div class="message-complete-image-container">
-        <img src="images/message_complete.webp" alt="Message Complete Design" class="message-complete-image">
-      </div>
-    </div>
-  </section>
-  
-  <section class="interactive-demo">
-    <h2>Interactive Telegram Live Chat Prototype</h2>
-    <p>Experience the feature firsthand through this interactive prototype. Explore how the Telegram Live Chat works in real-time.</p>
-    <div class="figma-embed">
-      <iframe 
-        style="border: 1px solid rgba(0, 0, 0, 0.1);" 
-        width="800" 
-        height="450" 
-        src="https://embed.figma.com/proto/W37jY5w3C3Mpgqn9k0kR9j/lm688---Telegram-Live-Chat?embed_origin=cdn.embedly.com&kind=proto&node-id=209-108622&page-id=0%3A1&scaling=scale-down&show-proto-sidebar=1&starting-point-node-id=209%3A108622&embed-host=share" 
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-  
 
+      <div class="midfi-prototype">
+        <h3>Telegram Story</h3>
+        <img src="images/story_mid_fidelity.webp" alt="Telegram Story Mid-Fi Prototype">
+      </div>
+    </section>
 
-      <!-- Demonstration -->
-      <!-- <section id="final-demo" class="highlighted-announcement">
-        <h4>✨ Try It Yourself ✨</h4>
-        <p>
-          Experience the <strong>Telegram LiveChat</strong> feature in action through our interactive prototype and video demonstrations.
-        </p>
-        <p>
-          <a href="https://drive.google.com/Activate_Live_Chat.mp4" target="_blank">Watch: Activating the Live Chat</a>
-        </p>
-        <p>
-          <a href="https://drive.google.com/typing_box_new.mp4" target="_blank">Watch: Using the Live Chat</a>
-        </p>
-      </section> -->
-    </div>
+    <section class="section-container">
+      <h2>Design Strategy</h2>
+      <p>We prioritized LiveChat using an impact-effort matrix and SWOT analysis. This feature aligned with user desires for fluid, transparent interactions.</p>
+      <img src="images/Impact-effort-matrix.png" alt="Impact-Effort Matrix" />
+    </section>
+
+    <section class="highlight-section">
+      <div class="section-container">
+        <h2>Why Live Chat?</h2>
+        <p>LiveChat redefines how users connect in digital environments. It minimizes waiting, improves clarity, and fosters more authentic, synchronous exchanges—like texting with transparency.</p>
+      </div>
+    </section>
+
+    <section class="section-container">
+      <h2>UI Kit & Visual Design</h2>
+      <img src="images/ui_kit.webp" alt="UI Kit Preview" />
+      <p>The UI Kit standardizes fonts, spacing, components, and colors across the feature.</p>
+    </section>
+
+    <section class="section-container">
+      <h2>High-Fidelity Screens</h2>
+      <p>These screens showcase the final visual design for Telegram LiveChat, reflecting real app UI with interactive and responsive layouts.</p>
+
+      <div class="highfi-gallery">
+        <img src="images/activation.webp" alt="Live Chat Activation" class="highfi-image">
+        <img src="images/typing_box_versions.webp" alt="Typing Box Versions" class="highfi-image">
+        <img src="images/message_complete.webp" alt="Message Complete UI" class="highfi-image">
+      </div>
+    </section>
+
+    <section class="section-container">
+      <h2>Final Thoughts</h2>
+      <p>Telegram LiveChat aims to humanize digital communication through design. From concept to prototype, we anchored decisions in user empathy and forward-thinking interaction.</p>
+    </section>
+
+    <section class="section-container">
+      <h2>Try It – Type "Hi" to Andres</h2>
+      <iframe style="border: 1px solid #ccc;" width="100%" height="450" src="https://embed.figma.com/proto/W37jY5w3C3Mpgqn9k0kR9j/lm688---Telegram-Live-Chat?embed_origin=cdn.embedly.com&kind=proto&node-id=209-108622&page-id=0%3A1&scaling=scale-down&show-proto-sidebar=1&starting-point-node-id=209%3A108622&embed-host=share" allowfullscreen></iframe>
+    </section>
   </main>
-</div>
 
-  <footer class="digital-page footer">
-    <p>&copy; 2024 Lili Mkrtchyan | Designed with creativity and passion.</p>
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Lili Mkrtchyan</p>
+      <p>Made with creativity and clarity.</p>
+    </div>
   </footer>
-
-  <!-- Default Statcounter code for My personal website
-https://lilymkrtchyan.github.io/ -->
-<script type="text/javascript">
-  var sc_project=13069539; 
-  var sc_invisible=1; 
-  var sc_security="29d96c63"; 
-  </script>
-  <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js" async></script>
-  <noscript><div class="statcounter"><a title="Web Analytics"
-  href="https://statcounter.com/" target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-  <!-- End of Statcounter Code -->
 </body>
 </html>

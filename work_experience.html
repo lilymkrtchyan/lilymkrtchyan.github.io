@@ -1,148 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work Experience - Lili Mkrtchyan</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work Experience – Lili Mkrtchyan</title>
+  <link rel="stylesheet" href="styles2.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f9f9f9;
+      color: #222;
+    }
+
+    .hero {
+      background: #fff;
+      text-align: center;
+      padding: 80px 20px 40px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .work-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+      padding: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .work-card img {
+      width: 260px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .work-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .work-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .work-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .work-card p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .work-card ul {
+      padding-left: 20px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .iframe-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      padding: 32px;
+      margin-bottom: 40px;
+    }
+
+    .iframe-card iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+
+    .footer {
+      background: #f5f5f5;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .work-card {
+        flex-direction: column;
+      }
+
+      .work-card img {
+        width: 100%;
+      }
+    }
+
+    .container {
+  max-width: 1080px;
+}
+
+  </style>
 </head>
 <body>
-  <header class="work-experience-header">
-    <nav class="navbar" aria-label="Main navigation">
-      <ul>
+
+  <!-- Header -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo"><a href="index.html">Lili Mkrtchyan</a></div>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="hardware.html">CubeScrub</a></li>
+        <li class="dropdown">
+          <a href="#">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="hardware.html">CubeScrub</a></li>
+            <li><a href="other.html">FringeEasy</a></li>
+            <li><a href="digital.html">Telegram LiveChat</a></li>
+            <li><a href="list_projects.html">More Projects</a></li>
+          </ul>
+        </li>
+        <li><a href="work_experience.html">Work</a></li>
         <li><a href="research.html">Research</a></li>
-        <li><a href="digital.html">Digital Product Design</a></li>
-        <li><a class="active" href="work_experience.html">Work Experience</a></li>
-        <!-- <li><a href="hobbies.html">Hobbies</a></li> -->
-        <li><a href="other.html">FringeEasy</a></li>
-        <li><a href="list_projects.html">More Projects</a></li>
       </ul>
-    </nav>
-    
-    <div class="hero work-experience-hero" style="background-image: url('images/professional_headshot.jpg');">
-        <div class="hero-text">
-          <h1 class="tagline">Work Experience</h1>
-          <p class="intro">Explore my professional journey and the impactful roles I’ve taken on over the years.</p>
-        </div>
-      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Work Experience</h1>
+    <p>Explore my professional journey and the impactful roles I’ve taken on over the years.</p>
   </header>
 
+  <!-- Main Content -->
   <div class="container">
-  <main>
-  <section id="armenian-experience" class="work-experience-section">
-    <h2>Work Experience: Armenian National Institute & Armenian Assembly of America</h2>
-    <div class="work-experience-content">
-      <img src="images/professional_headshot.jpg" alt="Lili Mkrtchyan Professional Headshot" class="work-experience-image">
-      <div class="work-experience-details">
-        <p>
-          During my time with the <strong>Armenian National Institute</strong> and the <strong>Armenian Assembly of America</strong>, 
-          I contributed to several impactful projects focused on documenting and preserving Armenian history and heritage.
-        </p>
+
+    <!-- Armenian Assembly -->
+    <div class="work-card">
+      <img src="images/professional_headshot.jpg" alt="Lili Mkrtchyan Headshot">
+      <div class="work-text">
+        <h2>Armenian National Institute & Armenian Assembly of America</h2>
+        <p><strong>Research Intern</strong> · Washington D.C. & Yerevan · Summer 2024</p>
         <ul>
-          <li>
-            Conducted extensive research on the Armenian Genocide and the conflict in Artsakh, contributing to the documentation 
-            and preservation of critical historical narratives.
-          </li>
-          <li>
-            Played a key role in archiving historical documents and updating archives related to the Armenian Genocide and the 
-            Lachin Corridor blockade. This included work on 
-            <a href="https://www.armenian-genocide.org/nagorno-karabakh.html" target="_blank" rel="noopener noreferrer">
-              documenting and archiving files relating to the war over the Artsakh region and the blockade of the Lachin Corridor.
-            </a>
-          </li>
-          <li>
-            Assisted in the development of a new website for the <strong>Armenian National Institute</strong>, 
-            ensuring accessibility to comprehensive resources for researchers, educators, and the general public.
-          </li>
-          <li>
-            Collaborated with teams in both Washington, D.C., and Yerevan, Armenia, highlighting my adaptability 
-            and commitment to cross-cultural teamwork.
-          </li>
-        </ul>
-        <p>
-          This experience deepened my understanding of historical preservation, policy research, and advocacy, 
-          while fostering my skills in collaboration, organization, and attention to detail.
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <section id="embedded-article" class="work-experience-section">
-    <h2>Featured Article: Armenian Assembly Summer Internship Programs</h2>
-    <p>
-      Explore a detailed overview of the <strong>Armenian Assembly's 2024 D.C. & Yerevan Summer Internship Programs</strong> 
-      that concluded successfully. This program offered participants, including myself, an opportunity to engage in impactful work 
-      and professional growth.
-    </p>
-
-    <div class="article-embed">
-        <iframe 
-          src="https://www.armenian-assembly.org/post/assembly-s-2024-d-c-yerevan-summer-internship-programs-come-to-a-successful-close"
-          class="responsive-iframe"
-          frameborder="0">
-        </iframe>
-      </div>      
-      
-  </section>
-
-
-  <section class="work-experience-section">
-    <h2>Leadership Experience: The Cornell Daily Sun</h2>
-    <div class="work-experience-item">
-      <img src="images/sunny.jpg" alt="Professional headshot" class="work-experience-image">
-      <div class="work-experience-details">
-        <h3>Associate Editor in Training</h3>
-        <p><strong>Cornell Daily Sun</strong> | Ithaca, NY <br> September 2023 - October 2023</p>
-        <ul>
-          <li>Completed a comprehensive 6-week training program focused on associate editor responsibilities.</li>
-          <li>Oversaw and edited the subjective section (50 writers) of the Cornell Daily Sun, including the opinion section, dining and arts sections, and guest columns. Supervised the dining and arts editors.</li>
-          <li>Attended weekly managing board meetings of 7 people, actively engaging in executive decision-making processes to shape the newspaper’s vision.</li>
-          <li>Resulted in departmental changes through actively advocating for underrepresented groups in my column read by 16,000 readers in print and 200,000 readers per month on the website.</li>
+          <li>Researched and archived documents on the Armenian Genocide and Artsakh war.</li>
+          <li>Helped develop a new section of the ANI website, improving historical accessibility.</li>
+          <li>Worked collaboratively across offices in the U.S. and Armenia.</li>
+          <li>Supported public policy research and digital heritage preservation.</li>
         </ul>
       </div>
     </div>
-  </section>
-  
-  <section class="work-experience-section">
-    <h2>Leadership Experience: International Students Union (ISU)</h2>
-    <div class="work-experience-item">
-      <img src="images/isu.jpg" alt="Professional headshot" class="work-experience-image">
-      <div class="work-experience-details">
-        <h3>Vice President of Publicity</h3>
-        <p><strong>International Students Union (ISU)</strong> | Ithaca, NY <br> September 2021 - March 2023</p>
-        <ul>
-          <li>Edited, coordinated, and sent out the bi-weekly newsletter to over 100 active members.</li>
-          <li>Led a 10-person team through mentorship and systematic meetings, resulting in 500 student engagements.</li>
-          <li>Collected $4,000 for the annual fundraiser for Armenia and Iran.</li>
-          <li>Initiated the news reporting protocols for the club to be more transparent and inclusive.</li>
-          <li>Contributed to <a href="https://isucornell.com/teams.html" class="highlighted-link" target="_blank">updating and maintaining the ISU website</a>, ensuring accessible and up-to-date information for students and the community.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  </main>
+ <!-- Embedded Article (Clean Layout) -->
+<div class="iframe-card">
+  <h2>Featured Article: Summer Internship Wrap-Up</h2>
+  <p>
+    View the official Armenian Assembly post highlighting the 2024 D.C. & Yerevan Summer Internship Programs.
+    <br><br>
+    <a href="https://www.armenian-assembly.org/post/assembly-s-2024-d-c-yerevan-summer-internship-programs-come-to-a-successful-close" target="_blank" style="font-weight: 600; color: #2a5d9f; text-decoration: underline;">
+      👉 Open Full Article in New Tab
+    </a>
+  </p>
+  <div style="margin-top: 24px;">
+    <iframe 
+      src="https://www.armenian-assembly.org/post/assembly-s-2024-d-c-yerevan-summer-internship-programs-come-to-a-successful-close"
+      style="width: 100%; height: 720px; border: none; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.05);"
+      loading="lazy">
+    </iframe>
+  </div>
 </div>
 
-  <footer class="work-experience-footer">
-    <p>&copy; 2024 Lili Mkrtchyan | Designed with passion.</p>
+
+    <!-- Cornell Daily Sun -->
+    <div class="work-card">
+      <img src="images/sunny.jpg" alt="Cornell Daily Sun">
+      <div class="work-text">
+        <h2>The Cornell Daily Sun</h2>
+        <h3>Associate Editor in Training</h3>
+        <p><strong>Ithaca, NY</strong> · Sep – Oct 2023</p>
+        <ul>
+          <li>Managed the subjective desk of 50+ writers across opinion, dining, and arts sections.</li>
+          <li>Led editing, feedback, and publishing while participating in managing board meetings.</li>
+          <li>Advocated for inclusion, reaching over 200K monthly readers with editorials.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ISU -->
+    <div class="work-card">
+      <img src="images/isu.jpg" alt="ISU Vice President of Publicity">
+      <div class="work-text">
+        <h2>International Students Union (ISU)</h2>
+        <h3>Vice President of Publicity</h3>
+        <p><strong>Ithaca, NY</strong> · Sep 2021 – Mar 2023</p>
+        <ul>
+          <li>Led a 10-person publicity team and ran a bi-weekly newsletter for 100+ members.</li>
+          <li>Fundraised $4,000 for causes in Armenia and Iran.</li>
+          <li>Revamped internal communications and updated the <a href="https://isucornell.com/teams.html" target="_blank">ISU website</a>.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Lili Mkrtchyan | Designed with clarity and care.</p>
   </footer>
 
-  <!-- Default Statcounter code for My personal website
-https://lilymkrtchyan.github.io/ -->
-<script type="text/javascript">
-  var sc_project=13069539; 
-  var sc_invisible=1; 
-  var sc_security="29d96c63"; 
+  <!-- Statcounter -->
+  <script type="text/javascript">
+    var sc_project=13069539; 
+    var sc_invisible=1; 
+    var sc_security="29d96c63"; 
   </script>
   <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js" async></script>
+    src="https://www.statcounter.com/counter/counter.js" async></script>
   <noscript><div class="statcounter"><a title="Web Analytics"
-  href="https://statcounter.com/" target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-  <!-- End of Statcounter Code -->
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
 </body>
 </html>

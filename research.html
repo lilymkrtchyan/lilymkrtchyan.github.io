@@ -1,99 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research Experience</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research Experience – Lili Mkrtchyan</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #222;
+    }
+
+    .hero {
+      background: #fff;
+      padding: 80px 20px 40px;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .research-card {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+      padding: 32px;
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .research-card img {
+      width: 280px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .research-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .research-card p {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .research-card ul {
+      padding-left: 20px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .research-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .footer {
+      background: #f5f5f5;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+
+    figure figcaption {
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+      margin-top: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .research-card {
+        flex-direction: column;
+      }
+
+      .research-card img {
+        width: 100%;
+      }
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid #333;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="research-header">
+
+  <header class="navbar">
     <nav class="navbar" aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="hardware.html">CubeScrub</a></li>
-        <li><a class="active" href="research.html">Research</a></li>
-        <li><a href="digital.html">Digital Product Design</a></li>
-        <li><a href="work_experience.html">Work Experience</a></li>
-        <!-- <li><a href="hobbies.html">Hobbies</a></li> -->
-        <li><a href="other.html">FringeEasy</a></li>
-        <li><a href="list_projects.html">More Projects</a></li>
-      </ul>
-    </nav>
-    
-    <div class="hero research-hero">
-      <div class="hero-text">
-        <h1 class="tagline">Research Experience</h1>
-        <p class="intro">Dive into my research journey and contributions to advancing scientific understanding and technological innovation.</p>
+      <div class="nav-container">
+        <div class="logo"><a href="index.html">Lili Mkrtchyan</a></div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="hardware.html">CubeScrub</a></li>
+              <li><a href="other.html">FringeEasy</a></li>
+              <li><a href="digital.html">Telegram LiveChat</a></li>
+              <li><a href="list_projects.html">More Projects</a></li>
+            </ul>
+          </li>
+          <li><a href="work_experience.html">Work</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Main Content -->
   <div class="container">
-  <main class="research-content">
-    <section class="research-section scifi-lab">
-        <div class="content-container">
-          <div class="description">
-            <h2>SciFi Lab, Cornell University</h2>
-            <p><strong>Research Assistant</strong> | Ithaca, NY | September 2024 – Ongoing</p>
-            <ul>
-              <li>Contributed to the development of glasses fitted with infrared sensors to detect eyelid movements, blinks, and twitches.</li>
-              <li>Collected and analyzed data to identify patterns in eyelid behavior, with the goal of advancing early detection of mental health disorders and fatigue.</li>
-              <li>Applied knowledge of cognitive science and computational neuroscience to enhance the design and functionality of healthcare technology.</li>
-            </ul>
-          </div>
-          <figure class="image-container">
-            <img src="images/pilot_study_Lili.png" alt="Pilot Study Image">
-            <figcaption>Conducting a pilot study for SciFi Lab's research.</figcaption>
-          </figure>
-        </div>
-      </section>
+    <div class="research-card">
+      <img src="images/pilot_study_Lili.png" alt="Pilot study at SciFi Lab">
+      <div class="research-text">
+        <h2>SciFi Lab, Cornell University</h2>
+        <p><strong>Research Assistant</strong> · Sep 2024 – Present</p>
+        <ul>
+          <li>Developed glasses fitted with IR sensors to detect eyelid blinks, twitches, and fatigue-related behaviors.</li>
+          <li>Collected and analyzed temporal signal data to identify movement patterns related to mental states.</li>
+          <li>Combined insights from cognitive science and neuroscience to improve wearable tech design for health.</li>
+        </ul>
+      </div>
+    </div>
 
-    <section class="research-section">
-      <h2>Null Compliance: NYC Local Law 144 and Algorithm Accountability</h2>
-      <p><strong>Student Contributor</strong> | Ithaca, NY | September 2023 – December 2023</p>
-      <ul>
-        <li>Conducted click path analysis to evaluate the accessibility of companies' Bias Audit Reports and AI tool usage notices on their websites.</li>
-        <li>Assessed compliance with NYC Local Law 144, which mandates companies using automated employment decision tools to publish Bias Audit Reports addressing potential race and gender bias.</li>
-        <li>Tracked the availability of required reports and notices, highlighting the state of compliance with AI-driven hiring system regulations.</li>
-        <li>Contributed findings to research presented at FAccT, The ACM Conference on Fairness, Accountability, and Transparency (June 2024).</li>
-        <li>Enhanced understanding of algorithm accountability and the challenges of enforcing transparency in AI systems.</li>
-      </ul>
-    </section>
+    <div class="research-card">
+      <div class="research-text">
+        <h2>Null Compliance · NYC Local Law 144</h2>
+        <p><strong>Student Contributor</strong> · Fall 2023</p>
+        <ul>
+          <li>Performed click path audits to evaluate how accessible bias audit reports were across 100+ hiring sites.</li>
+          <li>Assessed companies’ compliance with AI hiring transparency mandates in New York City.</li>
+          <li>Findings contributed to a research presentation at ACM FAccT 2024 on algorithm accountability.</li>
+        </ul>
+      </div>
+    </div>
 
-    <section class="research-section">
-      <h2>Current Research in Emotion, Cognition, and Brain</h2>
-      <p><strong>Student Contributor</strong> | Ithaca, NY | January 2023 – May 2023</p>
-      <ul>
-        <li>Explored advanced topics in neuroscience and psychology, focusing on how the brain represents internal physiological states and their influence on emotional experiences.</li>
-        <li>Synthesized scientific literature through written reactions to primary research articles, contributing to a deeper understanding of interoception-related debates and advancements.</li>
-        <li>Presented research findings through two co-presentations, honing skills in oral communication and collaboration.</li>
-        <li>Expanded understanding of the role of interoception in shaping emotion, cognition, and behavior through a multidisciplinary approach.</li>
-      </ul>
-    </section>
-  </main>
-</div>
+    <div class="research-card">
+      <div class="research-text">
+        <h2>Emotion, Cognition & the Brain</h2>
+        <p><strong>Student Contributor</strong> · Spring 2023</p>
+        <ul>
+          <li>Explored primary literature on interoception and emotion, focusing on internal bodily awareness.</li>
+          <li>Wrote reactions to peer-reviewed articles and presented findings in co-led discussions.</li>
+          <li>Developed multidisciplinary understanding of how body signals affect emotion and cognition.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
-  <footer class="research-footer">
-    <p>&copy; 2024 Lili Mkrtchyan | Designed with passion.</p>
+  <footer class="footer">
+    <p>&copy; 2024 Lili Mkrtchyan | Designed with clarity and care.</p>
   </footer>
 
-  <!-- Default Statcounter code for My personal website
-https://lilymkrtchyan.github.io/ -->
-<script type="text/javascript">
-  var sc_project=13069539; 
-  var sc_invisible=1; 
-  var sc_security="29d96c63"; 
+  <!-- Statcounter -->
+  <script type="text/javascript">
+    var sc_project=13069539; 
+    var sc_invisible=1; 
+    var sc_security="29d96c63"; 
   </script>
   <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js" async></script>
+    src="https://www.statcounter.com/counter/counter.js" async></script>
   <noscript><div class="statcounter"><a title="Web Analytics"
-  href="https://statcounter.com/" target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-  <!-- End of Statcounter Code -->
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
 </body>
 </html>
