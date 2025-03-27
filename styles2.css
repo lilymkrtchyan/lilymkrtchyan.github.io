@@ -419,4 +419,18 @@
     background-color: #2e5c70;
   }
   
+  .logo-link {
+    text-decoration: none;
+    color: #000; /* or whatever your header text color is */
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .logo-link:visited {
+    color: #000;
+    text-decoration: none;
+  }
+  
+ 
+  
   
