@@ -6,223 +6,123 @@
   <title>Lili Mkrtchyan – Portfolio</title>
   <link rel="stylesheet" href="styles2.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #fff;
-      color: #222;
-      line-height: 1.6;
-    }
-
-    .navbar {
-      background: #fff;
-      border-bottom: 1px solid #eee;
-      padding: 20px;
-    }
-
-    .nav-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      padding: 0;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    .nav-links a.active {
-      border-bottom: 2px solid #333;
-    }
-
-    .hero {
-      background: #f8f8f8;
-      text-align: center;
-      padding: 80px 20px 40px;
-    }
-
-    .tagline {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-    }
-
-    .intro {
-      font-size: 1.2rem;
-      color: #555;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    .projects h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 30px;
-    }
-
-    .project-grid {
+    .project-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
     }
 
     .project-card {
-      background: #fdfdfd;
-      border: 1px solid #eee;
-      border-radius: 10px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
       overflow: hidden;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-      transition: transform 0.2s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
     }
 
     .project-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     }
 
     .project-card img {
       width: 100%;
-      height: 200px;
+      height: 280px;
       object-fit: cover;
     }
 
+    .project-card div {
+      padding: 24px;
+      flex: 1;
+    }
+
     .project-card h3 {
-      margin: 16px 0;
-      font-size: 1.2rem;
-      color: #222;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #111;
     }
 
-    .download-btn {
-      text-align: center;
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    .download-btn button {
-      background-color: #3A758C;
-      color: #fff;
-      padding: 10px 20px;
+    .project-card p {
       font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+      color: #555;
+      line-height: 1.5;
     }
 
-    .download-btn button:hover {
-      background-color: #2f5f71;
-    }
-
-    .personal-statement {
+    .downloads {
+      text-align: center;
       margin-top: 80px;
     }
 
-    .personal-statement h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    .download-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
-    .personal-statement p {
-      margin-bottom: 20px;
-      color: #444;
+    .download-buttons button {
+      background-color: #3A758C;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .download-buttons button:hover {
+      background-color: #2e5c70;
     }
 
     footer {
-      text-align: center;
+      background: #f9f9f9;
       padding: 40px 20px;
-      background: #f5f5f5;
+      text-align: center;
+      color: #777;
       font-size: 0.9rem;
-      color: #666;
-      margin-top: 80px;
+      margin-top: 100px;
     }
 
-    .project-list {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  margin-top: 40px;
-}
-
-.project-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 600px;
+    /* Ensure the main content container is nicely centered and padded */
+.container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px 80px;
 }
 
-.project-block a {
-  text-decoration: none;
-  color: inherit;
+/* Hero section with cleaner padding */
+.hero {
+  background: #f8f8f8;
+  text-align: center;
+  padding: 100px 20px 60px;
+  margin-bottom: 60px;
 }
 
-.project-block img {
-  width: 100%;
-  max-height: 350px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+/* Section headings */
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.project-block h3 {
-  font-size: 1.4rem;
-  margin: 16px 0 8px;
+/* Resume download spacing */
+#resume-download {
+  margin-top: 80px;
+  padding: 40px 0;
 }
 
-.project-block p {
-  font-size: 1rem;
-  color: #555;
+/* Footer spacing */
+footer {
+  margin-top: 100px;
 }
-
-.navbar .dropdown {
-  position: relative;
-}
-
-.navbar .dropdown-menu {
-  display: none;
-  position: absolute;
-  background: white;
-  padding: 10px 0;
-  list-style: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  border-radius: 6px;
-  top: 100%;
-  left: 0;
-  min-width: 180px;
-  z-index: 999;
-}
-
-.navbar .dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu li a {
-  display: block;
-  padding: 10px 20px;
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.dropdown-menu li a:hover {
-  background-color: #f2f2f2;
-}
-
 
   </style>
 </head>
@@ -233,9 +133,8 @@
       <div class="logo">
         <a href="index.html" class="logo-link">Lili Mkrtchyan</a>
       </div>
-      
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
         <li class="dropdown">
           <a href="#">Projects</a>
           <ul class="dropdown-menu">
@@ -250,69 +149,73 @@
       </ul>
     </div>
   </nav>
-  
 
-  <section class="hero">
-    <h1 class="tagline">I'll figure it out.</h1>
-    <p class="intro">Hi! I'm Lili Mkrtchyan. I love exploring research, speculative design, and creating innovative projects.</p>
+  <section class="hero-banner-full">
+    <div class="hero-content-box">
+      <h1 class="tagline">Where thoughtful design meets human storytelling.</h1>
+      <p class="intro">
+        Hi! I'm Lili Mkrtchyan — a designer, researcher, and builder merging digital products with narrative-driven experiences.
+      </p>
+    </div>
   </section>
+  
+  
+  
+  
 
   <div class="container">
     <main>
       <section class="projects">
-        <h2>Explore My Work</h2>
-      
-        <div class="project-card-horizontal">
-          <img src="images/cubescrub_instructions.png" alt="CubeScrub Thumbnail" />
-          <div class="project-info">
-            <h3>CubeScrub</h3>
-            <p>A 3-axis cleaning robot inspired by Cartesian systems — made with gears, belts, and 3D-printed joints.</p>
-            <a href="hardware.html">View Project →</a>
-          </div>
-        </div>
-      
-      
-        <div class="project-card-horizontal">
-          <img src="images/dpd_thumbnail.png" alt="Digital Product Design Thumbnail" />
-          <div class="project-info">
-            <h3>LiveChat</h3>
-            <p>Digital Product design case study implementing a "LiveChat" to Telegram.</p>
-            <a href="digital.html">View Project →</a>
-          </div>
-        </div>
-      
-        <div class="project-card-horizontal">
-          <img src="images/other_projects.jpg" alt="FringeEasy Thumbnail" />
-          <div class="project-info">
-            <h3>FringeEasy</h3>
-            <p>Data-driven tourism solution for Edinburgh. Designed to reduce overtourism and guide locals + visitors.</p>
-            <a href="other.html">View Project →</a>
-          </div>
-        </div>
-      
-        <div class="project-card-horizontal">
-          <img src="images/work_experience.jpg" alt="Work Experience Thumbnail" />
-          <div class="project-info">
-            <h3>Work Experience</h3>
-            <p>Research, archival, and design internships across Armenia and Washington D.C. focused on history & tech.</p>
-            <a href="work_experience.html">View Project →</a>
-          </div>
+        <h2 class="section-title">Designer & Developer Projects</h2>
+        <div class="project-cards">
+
+          <a href="hardware.html" class="project-card">
+            <img src="images/cubescrub_instructions.png" alt="CubeScrub Thumbnail" />
+            <div>
+              <h3>CubeScrub</h3>
+              <p>A 3-axis cleaning robot built with 3D-printed joints and precise movement control.</p>
+            </div>
+          </a>
+
+          <a href="digital.html" class="project-card">
+            <img src="images/dpd_thumbnail.png" alt="Telegram LiveChat Thumbnail" />
+            <div>
+              <h3>LiveChat</h3>
+              <p>UI/UX case study redesigning real-time messaging on Telegram using transparency principles.</p>
+            </div>
+          </a>
+
+          <a href="other.html" class="project-card">
+            <img src="images/other_projects.jpg" alt="FringeEasy Thumbnail" />
+            <div>
+              <h3>FringeEasy</h3>
+              <p>A speculative tourism tool for locals and festivalgoers in Edinburgh to avoid congestion.</p>
+            </div>
+          </a>
+
+          <a href="work_experience.html" class="project-card">
+            <img src="images/work_experience.jpg" alt="Work Experience Thumbnail" />
+            <div>
+              <h3>Work Experience</h3>
+              <p>From research to editorial roles, across tech, archives, and global communities.</p>
+            </div>
+          </a>
+
+          <a href="research.html" class="project-card">
+            <img src="images/pilot_study_Lili.png" alt="Research Thumbnail" />
+            <div>
+              <h3>Research</h3>
+              <p>Human-computer interaction, wearable IR sensing, and digital health interfaces.</p>
+            </div>
+          </a>
+
         </div>
       </section>
-      
-      <div class="project-card-horizontal">
-        <img src="images/pilot_study_Lili.png" alt="Research Thumbnail" />
-        <div class="project-info">
-          <h3>Research Experience</h3>
-          <p>Exploring eyelid tracking using IR sensors, ground truth data labeling, and wearable system evaluation.</p>
-          <a href="research.html">View Project →</a>
-        </div>
-      </div>
 
       <section id="resume-download" class="downloads">
         <h3>Download Documents</h3>
         <div class="download-buttons">
-          <a href="files\MKRTCHYAN.LILI.CV-2025.pdf" download>
+          <a href="files/MKRTCHYAN.LILI.CV-2025.pdf" download>
             <button type="button">Download Resume (PDF)</button>
           </a>
           <a href="files/Lili_Mkrtchyan_Portfolio.pdf" download>
@@ -320,27 +223,24 @@
           </a>
         </div>
       </section>
-      
-
-     
     </main>
   </div>
 
   <footer>
-    <p>&copy; 2024 Lili Mkrtchyan | Designed with passion.</p>
+    <p>&copy; 2024 Lili Mkrtchyan | Designed with clarity and care.</p>
   </footer>
 
   <!-- Statcounter Analytics -->
   <script type="text/javascript">
-    var sc_project=13069539; 
-    var sc_invisible=1; 
-    var sc_security="29d96c63"; 
+    var sc_project = 13069539; 
+    var sc_invisible = 1; 
+    var sc_security = "29d96c63"; 
   </script>
-  <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js" async></script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
   <noscript><div class="statcounter"><a title="Web Analytics"
     href="https://statcounter.com/" target="_blank"><img class="statcounter"
     src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+
 </body>
 </html>
