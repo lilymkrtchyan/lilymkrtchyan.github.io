@@ -6,55 +6,117 @@
   <title>Appventure – Ithaca Soap Mobile App</title>
   <link rel="stylesheet" href="styles2.css" />
 </head>
-<body>
-  <div class="project-detail">
-    <a href="index.html" class="back-link">← Back to Projects</a>
+<body class="appventure-page">
 
-    <h1>Appventure – Ithaca Soap Mobile App</h1>
-    <p class="project-subtitle">Progressive Web App · INFO 4340 · Spring 2025</p>
-
-    <section class="intro">
-      <p><strong>Appventure</strong> is a mobile-first PWA we built for Ithaca Soap, a small sustainable business. We focused on elevating product discoverability, educating users on sustainable soap usage, and integrating user incentives like rewards and referrals.</p>
-      <p><a href="https://cornell-info4340-2025sp.github.io/appventure-project/" target="_blank" class="download-link">Download Appventure</a></p>
-    </section>
-
-    <section class="section">
-      <h2>The Challenge</h2>
-      <p>Ithaca Soap needed a mobile experience that translated their core values—natural ingredients, sustainability, and education—into a user-friendly app. The site had to speak to eco-conscious consumers who wanted ingredient transparency, clear usage guides, and incentives to return.</p>
-    </section>
-
-    <section class="section">
-      <h2>Journey & Process</h2>
-      <ul>
-        <li><strong>User & Client Interviews:</strong> We spoke with the founder Wendy and conducted 4 detailed interviews with users of varying demographics and digital fluency.</li>
-        <li><strong>Personas & Task Flows:</strong> Created personas based on motivations like budget-saving, sensitive skin, and scent preference.</li>
-        <li><strong>Sketching & Wireframing:</strong> We developed the core pages—Home, Products, Product Detail, Rewards, FAQ—with responsive, intuitive layout plans.</li>
-        <li><strong>Iterative User Testing:</strong> Users tested our early prototype; we implemented suggestions like a "Sensitive Skin" filter, usage tips, and mobile bottom nav bar.</li>
-        <li><strong>Development:</strong> Built the full app in Vue.js with JSON fixtures for products. We followed mobile app UI best practices like cards, bottom nav, and scrollable bundles.</li>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html" class="logo-link">Lili Mkrtchyan</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a href="hardware.html">CubeScrub</a></li>
+            <li><a href="other.html">FringeEasy</a></li>
+            <li><a href="digital.html">Telegram LiveChat</a></li>
+            <li><a href="list_projects.html">More Projects</a></li>
+          </ul>
+        </li>
+        <li><a href="work_experience.html">Work</a></li>
+        <li><a href="research.html">Research</a></li>
       </ul>
+    </div>
+  </nav>
+
+  <main class="main-wrapper">
+    <section class="hero-section">
+      <h1 class="hero-title">Appventure – Ithaca Soap Mobile App</h1>
+      <p class="hero-subtitle">Progressive Web App · INFO 4340 · Spring 2025</p>
     </section>
 
-    <section class="section">
-      <h2>Results</h2>
-      <ul>
-        <li><strong>Task Completion:</strong> All 4 users completed their assigned tasks without assistance in our final round of testing.</li>
-        <li><strong>Key Feature Successes:</strong> Filtering by scent and skin type was repeatedly praised for its clarity and responsiveness.</li>
-        <li><strong>Business Alignment:</strong> Our client was especially happy with how we highlighted the soap’s sustainability and bundling options to drive engagement.</li>
-        <li><strong>Professional Quality:</strong> The app was presented in a final showcase and met all course standards for an installable PWA.</li>
-      </ul>
+
+    <section class="section-container">
+      <p><strong>Appventure</strong> is a mobile-first PWA built for Ithaca Soap, a local eco-conscious brand. We focused on translating the founder's values into a mobile-first experience by highlighting sustainable practices, clarifying soap usage, and adding referral-based rewards.</p>
+      <p><a href="https://cornell-info4340-2025sp.github.io/appventure-project/" target="_blank" class="download-link">🌿 View Appventure Web App</a></p>
     </section>
 
-    <section class="section">
-      <h2>My Role</h2>
-      <p>I implemented the product grid and detail views using Vue and Bootstrap-Vue, ensuring a responsive 2-column layout and dynamic filtering. I also participated in usability discussions and co-authored the final report.</p>
-    </section>
-
-    <section class="section">
-      <h2>Final Report</h2>
-      <p>
-        <a href="assets/INFO4340_Appventure_Final_Report.pdf" download class="report-download">📄 Download Full Report</a>
+    <section class="section-container">
+      <h2>Live App Preview</h2>
+      <p>You can explore the live version of Appventure below without leaving the site. This is the installable Progressive Web App built for Ithaca Soap:</p>
+    
+      <div class="app-preview-wrapper">
+        <iframe 
+          src="https://cornell-info4340-2025sp.github.io/appventure-project/" 
+          width="100%" 
+          height="600" 
+          style="border: 1px solid #ddd; border-radius: 12px;"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+    
+      <p style="text-align: center; margin-top: 10px;">
+        <a href="https://cornell-info4340-2025sp.github.io/appventure-project/" target="_blank" class="download-link">🌿 Open Appventure in New Tab</a>
       </p>
     </section>
-  </div>
+    
+
+    <section class="section-container">
+      <h2>Our Challenge</h2>
+      <p>The goal was to support Ithaca Soap's mission of environmental transparency and product education while delivering a modern, user-friendly mobile experience. This required prioritizing usability, discoverability, and emotional connection in the design.</p>
+    </section>
+
+    <section class="section-container">
+      <h2>Design Process</h2>
+      <ul>
+        <li><strong>Interviews:</strong> We conducted 4 interviews and spoke to the founder to understand both brand goals and user concerns.</li>
+        <li><strong>Personas & Flows:</strong> Created personas prioritizing sustainability, budget, and skin sensitivity. Designed flows for shopping, filtering, and educational usage tips.</li>
+        <li><strong>Wireframing:</strong> Iterated on Home, Products, FAQ, and Rewards pages with a mobile-first layout and cards-based hierarchy.</li>
+        <li><strong>Development:</strong> Built a Vue.js PWA using JSON fixtures. Key features include filtering, product detail pages, and a dynamic referral program.</li>
+      </ul>
+    </section>
+
+    <section class="section-container">
+      <h2>Results</h2>
+      <ul>
+        <li>💬 All 4 users successfully completed tasks like finding citrus soaps, identifying sensitive skin products, and viewing bundle deals.</li>
+        <li>🎯 Rewards and referral systems were praised for being visible and easy to use.</li>
+        <li>💡 User testing led us to improve filter visibility and add usage instructions for natural soaps.</li>
+        <li>📈 Our client appreciated how the app emphasized values like ingredient clarity and sustainability over gimmicks.</li>
+      </ul>
+    </section>
+
+    <section class="section-container">
+      <h2>My Role</h2>
+      <p>I led frontend implementation of the product grid and detail pages, optimized the responsive layout for small screens, and contributed heavily to usability testing and pitch delivery. I also co-authored the final written report.</p>
+    </section>
+
+    <section class="section-container">
+      <h2>Final Report</h2>
+      <p><a href="files/Ithaca%20Soap%20Final%20Report%20Submission.pdf" class="report-download" download>📄 Download Final Report (PDF)</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Lili Mkrtchyan</p>
+      <p>Made with creativity and clarity.</p>
+    </div>
+  </footer>
+
+  <!-- Statcounter -->
+  <script type="text/javascript">
+    var sc_project = 13069539; 
+    var sc_invisible = 1; 
+    var sc_security = "29d96c63"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript><div class="statcounter">
+    <a title="Web Analytics" href="https://statcounter.com/" target="_blank">
+      <img class="statcounter" src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade" />
+    </a>
+  </div></noscript>
 </body>
 </html>
