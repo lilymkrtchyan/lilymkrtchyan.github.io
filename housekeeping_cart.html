@@ -9,6 +9,49 @@
   
 </head>
 
+<script>
+  let currentIndex = 0;
+  let problemCards = [];
+
+  function openProblemModal(card) {
+    problemCards = Array.from(document.querySelectorAll('.problem-card'));
+    currentIndex = problemCards.indexOf(card);
+    updateModalFromCard(card);
+    document.getElementById('problemModal').style.display = 'flex';
+  }
+
+  function updateModalFromCard(card) {
+    document.getElementById('modal-title').textContent = card.dataset.title;
+    document.getElementById('modal-text').textContent = card.dataset.text;
+    document.getElementById('modal-img').src = card.dataset.img;
+  }
+
+  function closeProblemModal() {
+    document.getElementById('problemModal').style.display = 'none';
+  }
+
+  function showNextCard() {
+    currentIndex = (currentIndex + 1) % problemCards.length;
+    updateModalFromCard(problemCards[currentIndex]);
+  }
+
+  function showPrevCard() {
+    currentIndex = (currentIndex - 1 + problemCards.length) % problemCards.length;
+    updateModalFromCard(problemCards[currentIndex]);
+  }
+
+  // Keyboard support
+  document.addEventListener('keydown', (e) => {
+    const modal = document.getElementById('problemModal');
+    if (modal.style.display === 'flex') {
+      if (e.key === 'Escape') closeProblemModal();
+      if (e.key === 'ArrowRight') showNextCard();
+      if (e.key === 'ArrowLeft') showPrevCard();
+    }
+  });
+</script>
+
+
 <body class="housekeeping-page">
 
 
@@ -43,57 +86,75 @@
     
 
 
-  <section class="section-container">
-    <h2>Identifying Real-World Problem Areas</h2>
-    <p>Through fieldwork at the Statler Hotel, we identified recurring challenges faced by hotel staff in daily operations. Below are key friction points we uncovered across various departments:</p>
-  
-    <div class="problem-areas-grid">
-      <!-- Front Desk -->
-      <div class="problem-card">
-        <img src="images/front_desk_observation.png" alt="Front Desk Issue">
-        <div class="problem-text">
-          <h3>Front Desk / Bellboy</h3>
-          <p>The hybrid system lacks synchronization between digital and manual workflows. Staff must manually sort keys and collect guest info, leading to delays, long lines, and inefficiencies.</p>
+    <section class="section-container">
+      <h2>Identifying Real-World Problem Areas</h2>
+      <p>Through fieldwork at the Statler Hotel, we identified recurring challenges faced by hotel staff in daily operations. Below are key friction points we uncovered across various departments:</p>
+    
+      <div class="problem-areas-grid">
+        <!-- Front Desk -->
+        <div class="problem-card" onclick="openProblemModal(this)"
+             data-title="Front Desk / Bellboy"
+             data-text="The hybrid system lacks synchronization between digital and manual workflows. Staff must manually sort keys and collect guest info, leading to delays, long lines, and inefficiencies."
+             data-img="images/front_desk_observation.png">
+          <img src="images/front_desk_observation.png" alt="Front Desk Issue">
+          <div class="problem-text">
+            <h3>Front Desk / Bellboy</h3>
+            <p>The hybrid system lacks synchronization between digital and manual workflows. Staff must manually sort keys and collect guest info, leading to delays, long lines, and inefficiencies.</p>
+          </div>
+        </div>
+    
+        <!-- Dishwashing -->
+        <div class="problem-card" onclick="openProblemModal(this)"
+             data-title="Kitchen – Dishwashing"
+             data-text="The dishwasher requires two people: one to load, one to unload. If operated solo, the constant glove switching and handwashing disrupt efficiency and hygiene standards."
+             data-img="images/washing_machine.jpeg">
+          <img src="images/washing_machine.jpeg" alt="Kitchen Dishwashing">
+          <div class="problem-text">
+            <h3>Kitchen – Dishwashing</h3>
+            <p>The dishwasher requires two people: one to load, one to unload. If operated solo, the constant glove switching and handwashing disrupt efficiency and hygiene standards.</p>
+          </div>
+        </div>
+    
+        <!-- Storage -->
+        <div class="problem-card" onclick="openProblemModal(this)"
+             data-title="Kitchen – Storage"
+             data-text="Ingredient bins are heavy and follow a FIFO system. Moving older items to the front means manually lifting multiple bins, putting unnecessary strain on the kitchen staff."
+             data-img="images/storage.jpeg">
+          <img src="images/storage.jpeg" alt="Kitchen Storage">
+          <div class="problem-text">
+            <h3>Kitchen – Storage</h3>
+            <p>Ingredient bins are heavy and follow a FIFO system. Moving older items to the front means manually lifting multiple bins, putting unnecessary strain on the kitchen staff.
+
+            </p>
+          </div>
+        </div>
+    
+        <!-- Towels -->
+        <div class="problem-card" onclick="openProblemModal(this)"
+             data-title="Housekeeping – Towels"
+             data-text="Managers manually carry heavy piles of dirty towels to the laundry room, wait, fold, and return them. This tedious routine creates significant physical strain and wasted time."
+             data-img="images/housekeeping_towels.jpeg">
+          <img src="images/housekeeping_towels.jpeg" alt="Housekeeping Towels">
+          <div class="problem-text">
+            <h3>Housekeeping – Towels</h3>
+            <p>Managers manually carry heavy piles of dirty towels to the laundry room, wait, fold, and return them. This tedious routine creates significant physical strain and wasted time.</p>
+          </div>
+        </div>
+    
+        <!-- Carts -->
+        <div class="problem-card" onclick="openProblemModal(this)"
+             data-title="Housekeeping – Carts"
+             data-text="Staff push heavy carts all day, reporting back and neck pain. Carts block hallways, obstruct visibility, and need frequent restocking—slowing down room servicing."
+             data-img="images/housekeeping_cart.jpeg">
+          <img src="images/housekeeping_cart.jpeg" alt="Housekeeping Carts">
+          <div class="problem-text">
+            <h3>Housekeeping – Carts</h3>
+            <p>Staff push heavy carts all day, reporting back and neck pain. Carts block hallways, obstruct visibility, and need frequent restocking—slowing down room servicing.</p>
+          </div>
         </div>
       </div>
-  
-      <!-- Dishwashing -->
-      <div class="problem-card">
-        <img src="images/washing_machine.jpeg" alt="Kitchen Dishwashing">
-        <div class="problem-text">
-          <h3>Kitchen – Dishwashing</h3>
-          <p>The dishwasher requires two people: one to load, one to unload. If operated solo, the constant glove switching and handwashing disrupt efficiency and hygiene standards.</p>
-        </div>
-      </div>
-  
-      <!-- Storage -->
-      <div class="problem-card">
-        <img src="images/storage.jpeg" alt="Kitchen Storage">
-        <div class="problem-text">
-          <h3>Kitchen – Storage</h3>
-          <p>Ingredient bins are heavy and follow a FIFO system. Moving older items to the front means manually lifting multiple bins, putting unnecessary strain on the kitchen staff.</p>
-        </div>
-      </div>
-  
-      <!-- Towels -->
-      <div class="problem-card">
-        <img src="images/housekeeping_towels.jpeg" alt="Housekeeping Towels">
-        <div class="problem-text">
-          <h3>Housekeeping – Towels</h3>
-          <p>Managers manually carry heavy piles of dirty towels to the laundry room, wait, fold, and return them. This tedious routine creates significant physical strain and wasted time.</p>
-        </div>
-      </div>
-  
-      <!-- Carts -->
-      <div class="problem-card">
-        <img src="images/housekeeping_cart.jpeg" alt="Housekeeping Carts">
-        <div class="problem-text">
-          <h3>Housekeeping – Carts</h3>
-          <p>Staff push heavy carts all day, reporting back and neck pain. Carts block hallways, obstruct visibility, and need frequent restocking—slowing down room servicing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+    
   
   
   <section class="section-container">
@@ -113,23 +174,95 @@
       </object>
     </div>
   </section>
+
+  <section class="section-container">
+    <h2>Prototyping the Robotic Cart</h2>
+    <p>We progressively prototyped the cart by retrofitting an off-the-shelf system with hoverboard components. Here's a look into our iterative process:</p>
+  
+    <div class="prototype-gallery">
+      <div class="prototype-item">
+        <h4>Baseline Housekeeping Cart</h4>
+        <img src="images/standing_hov_board_cart.png" alt="Standing Cart" class="prototype-image">
+        <p class="caption">We started with a commercial plastic housekeeping cart as our base for retrofitting.</p>
+      </div>
+  
+      <div class="prototype-item">
+        <h4>Hoverboard Integration (Close-up)</h4>
+        <img src="images/hov_board_up_close.jpeg" alt="Hoverboard Inside" class="prototype-image">
+        <p class="caption">We exposed internal wiring and reconfigured the hoverboard’s power distribution.</p>
+      </div>
+  
+      <div class="prototype-item">
+        <h4>Mounting the Drive System</h4>
+        <img src="images/hov_board_cart_upside.jpeg" alt="Cart Upside Down" class="prototype-image">
+        <p class="caption">The cart was flipped for easier mounting of the hoverboard’s wheels and motors.</p>
+      </div>
+  
+      <div class="prototype-item">
+        <h4>Mockup: Hoverboard Test #1</h4>
+        <img src="images/hob_board1.jpeg" alt="Pink Hoverboard Test" class="prototype-image">
+        <p class="caption">Early test using wooden brackets to support a pink hoverboard under a wire rack.</p>
+      </div>
+  
+      <div class="prototype-item">
+        <h4>Mockup: Hoverboard Test #2</h4>
+        <img src="images/hob_board2.jpeg" alt="Hoverboard Structure" class="prototype-image">
+        <p class="caption">Additional structural support tested with tubing and zip ties for corner stability.</p>
+      </div>
+    </div>
+  </section>
+  
+  
   
   
 
-  <div class="image-row smaller-images">
-    <figure>
-      <img src="images/storyboard_sample.png" alt="Storyboard Example">
-      <figcaption>Storyboard to identify housekeeping pain points</figcaption>
-    </figure>
-    <figure>
-      <img src="images/initial_prototypes.png" alt="Initial Prototype">
-      <figcaption>Early makeshift cart built for intuition testing</figcaption>
-    </figure>
-    <figure>
-      <img src="images/hoverboard_mod.png" alt="Hoverboard Prototype">
-      <figcaption>Final cart retrofitted with hoverboard for powered motion</figcaption>
-    </figure>
-  </div>
+  
+
+  <section class="section-container">
+    <h2>How We Built It</h2>
+    <p>Once we selected the hoverboard as our power base, we disassembled it and engineered a custom electronics stack that allowed us to control the motors and test behaviors under load. Here's how we made it work:</p>
+  
+    <ul class="build-steps">
+      <li><strong>Disassembly:</strong> We removed the hoverboard’s original plastic housing and took out its proprietary control board to access the motors and sensors.</li>
+      <li><strong>Motor Control Setup:</strong> The brushless motors with rotary encoders were rewired to connect to an <em>ODrive</em> motor controller for high-precision motion control.</li>
+      <li><strong>Processing Logic:</strong> A <em>Raspberry Pi</em> was configured to send commands to the ODrive and handle encoder feedback and tuning.</li>
+      <li><strong>Sensor Repurposing:</strong> We reused the original pressure sensors (from the footpads) to simulate user input and verify motor actuation under different triggers.</li>
+      <li><strong>Testing:</strong> After verifying all connections, we tested the response time, speed, and control fidelity before integrating it with the cart.</li>
+    </ul>
+  
+    <p style="margin-top: 20px;">
+      This hardware stack gave us full low-level control over the hoverboard wheels and opened possibilities for adding position control, obstacle sensing, and user overrides in future iterations.
+    </p>
+  </section>
+
+  
+  <section class="section-container">
+    <h2>Reflections, Feedback & Constraints</h2>
+  
+    <h3>Personal Reflections</h3>
+    <p>
+      This project pushed me to bridge mechanical design with electronics integration in a fast-paced, iterative environment. I learned how to reverse-engineer existing systems, work with unfamiliar hardware like hoverboards and ODrive controllers, and test in unpredictable, real-world conditions. Beyond the technical work, I gained confidence in collaborative prototyping, troubleshooting, and decision-making under uncertainty.
+    </p>
+  
+    <h3>Professional Feedback</h3>
+    <p>
+      During our presentation at the final design showcase, industry professionals and faculty appreciated the project’s ambition to retrofit a commercially available cart instead of building from scratch. Several highlighted our decision to keep the system modular and adaptable to a wide range of hotel environments. We also received praise for maintaining user-centered thinking throughout, especially in how we handled ergonomic concerns and hallway obstructions.
+    </p>
+  
+    <h3>Technical Constraints</h3>
+    <ul class="constraint-list">
+      <li><strong>Power Supply:</strong> Our portable power source needed to deliver consistent current without overheating the motor controllers during prolonged use.</li>
+      <li><strong>Weight Distribution:</strong> The hoverboard motors were not designed to carry a fully loaded cart with uneven weight — we had to reinforce the base and balance payloads carefully.</li>
+      <li><strong>Sensor Integration:</strong> Repurposing footpad pressure sensors required custom calibration and sometimes inconsistent trigger sensitivity.</li>
+      <li><strong>Limited Real-Time Control:</strong> Controlling the motors via Raspberry Pi and ODrive introduced slight delays when reading encoder data at high frequency.</li>
+      <li><strong>Hardware Fit:</strong> Mounting the drive base to the cart involved drilling and zip-tying in tight spaces, which complicated maintenance and repositioning.</li>
+    </ul>
+  
+    <p style="margin-top: 20px;">
+      While we didn’t have time to implement full autonomy or remote steering, this project served as a meaningful step toward smarter assistive tools in the hospitality industry — blending engineering with empathy and practicality.
+    </p>
+  </section>
+  
 
   <!-- FINAL PRESENTATION SECTION -->
 <section class="section-container">
@@ -159,29 +292,16 @@
 <!-- LOGBOOK HIGHLIGHTS -->
 <section class="section-container">
   <h2>Design Logbook Highlights</h2>
-  <p>Throughout this class, I kept a detailed logbook capturing sketches, thoughts, and progress reflections from all three major projects — including the Robotic Housekeeping Cart. Here are a few snapshots:</p>
+  <p>Throughout this class, I kept a detailed physical logbook documenting our sketches, design decisions, technical challenges, and research inspiration. Here's a curated gallery of some key spreads from the process:</p>
 
-  <div class="image-row smaller-images">
-    <figure>
-      <img src="images/logbook_mindmap.png" alt="Mind Map from Logbook">
-      <figcaption>Mind map connecting household tasks with robotic solutions</figcaption>
-    </figure>
-    <figure>
-      <img src="images/logbook_sketch.png" alt="Prototype Sketch">
-      <figcaption>Sketches from our prototyping and iteration phases</figcaption>
-    </figure>
-    <figure>
-      <img src="images/logbook_notes.png" alt="Project Notes">
-      <figcaption>Reflection on stakeholder interviews and technical constraints</figcaption>
-    </figure>
-  </div>
 
   <div class="download-btn" style="margin-top: 30px;">
-    <a href="files/Logbook.pdf" download>
+    <a href="files/Logbook_rotated.pdf" download>
       <button>📔 Download Full Logbook (PDF)</button>
     </a>
   </div>
 </section>
+
 
 <!-- FULL LOGBOOK EMBED -->
 <section class="section-container">
@@ -212,5 +332,19 @@
       <p>Designed with clarity and collaboration.</p>
     </div>
   </footer>
+
+  <div id="problemModal" class="problem-modal" onclick="closeProblemModal()">
+    <div class="problem-modal-content" onclick="event.stopPropagation()">
+      <button class="modal-nav left" onclick="event.stopPropagation(); showPrevCard()">&#8592;</button>
+      <img id="modal-img" src="" alt="Problem Image">
+      <h3 id="modal-title"></h3>
+      <p id="modal-text"></p>
+      <button class="modal-nav right" onclick="event.stopPropagation(); showNextCard()">&#8594;</button>
+    </div>
+  </div>
+  
+
+  
+  
 </body>
 </html>
