@@ -92,36 +92,431 @@
     }
 
     /* Ensure the main content container is nicely centered and padded */
-.container {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* Hero section with cleaner padding */
+    .hero {
+      background: #f8f8f8;
+      text-align: center;
+      padding: 100px 20px 60px;
+      margin-bottom: 60px;
+    }
+
+    /* Section headings */
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* Resume download spacing */
+    #resume-download {
+      margin-top: 80px;
+      padding: 40px 0;
+    }
+
+    /* Footer spacing */
+    footer {
+      margin-top: 100px;
+    }
+
+    /* Skills section */
+    .skills-section {
+      margin: 80px auto;
+      padding: 60px 20px;
+      max-width: 1200px;
+      text-align: center;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .skill-card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 36px rgba(0, 0, 0, 0.10);
+    }
+
+    .skill-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: #3A758C;
+    }
+
+    .skill-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Roadmap section */
+    .roadmap-section {
+      background: #ffffff;
+      margin: 40px auto 80px;
+      padding: 60px 20px 40px;
+      max-width: 1200px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .roadmap-intro {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 40px;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .roadmap-visual {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      margin: 0 auto 40px;
+      overflow: visible;
+    }
+
+    .roadmap-visual svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .roadmap-marker {
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      background: #D95E52;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+      transform: translate(-50%, -50%);
+    }
+
+    .roadmap-marker::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 12px solid #D95E52;
+    }
+
+    .roadmap-marker span {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Position each marker along the road */
+    .marker-1 { left: 7%;  top: 140px; }
+    .marker-2 { left: 22%; top: 80px; }
+    .marker-3 { left: 37%; top: 150px; }
+    .marker-4 { left: 52%; top: 80px; }
+    .marker-5 { left: 66%; top: 150px; }
+    .marker-6 { left: 81%; top: 95px; }
+    .marker-7 { left: 93%; top: 150px; }
+
+    .roadmap-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 10px;
+    }
+
+    .roadmap-card {
+      background: #f9f9f9;
+      border-radius: 16px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+    }
+
+    .roadmap-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .roadmap-card-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #3A758C;
+      color: #fff;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .roadmap-card h3 {
+      font-size: 1rem;
+      margin: 0;
+      color: #222;
+    }
+
+    .roadmap-card p {
+      margin-top: 6px;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .roadmap-card ul {
+      margin-top: 6px;
+      padding-left: 18px;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .roadmap-section {
+        padding: 40px 16px 30px;
+      }
+
+      .roadmap-visual {
+        height: 200px;
+      }
+
+      /* Keep markers readable on small screens */
+      .roadmap-marker {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+      }
+
+      .marker-1 { left: 10%; top: 145px; }
+      .marker-2 { left: 26%; top: 90px; }
+      .marker-3 { left: 42%; top: 150px; }
+      .marker-4 { left: 58%; top: 90px; }
+      .marker-5 { left: 72%; top: 150px; }
+      .marker-6 { left: 86%; top: 95px; }
+      .marker-7 { left: 94%; top: 155px; }
+    }
+  
+  /* Marker styling */
+.roadmap-marker {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: #D95E52;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.roadmap-marker:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.22);
+}
+
+/* Popup cards */
+.popup-card {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 260px;
+  width: 320px;
+  background: #fff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 34px rgba(0,0,0,0.15);
+  animation: fadeIn .25s ease;
+  z-index: 20;
+}
+
+.popup-card h3 {
+  margin: 0 0 6px;
+}
+
+.popup-card ul {
+  padding-left: 18px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to   { opacity: 1; transform: translate(-50%, 0);   }
+}
+
+.roadmap-section {
+  background: #ffffff;
+  margin: 40px auto 80px;
+  padding: 60px 20px 50px;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 80px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
-/* Hero section with cleaner padding */
-.hero {
-  background: #f8f8f8;
+.roadmap-intro {
   text-align: center;
-  padding: 100px 20px 60px;
-  margin-bottom: 60px;
+  max-width: 640px;
+  margin: 0 auto 40px;
+  color: #555;
+  font-size: 1rem;
 }
 
-/* Section headings */
-.section-title {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 40px;
+.roadmap-visual {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  margin: 0 auto 30px;
 }
 
-/* Resume download spacing */
-#resume-download {
-  margin-top: 80px;
-  padding: 40px 0;
+.roadmap-visual svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-/* Footer spacing */
-footer {
-  margin-top: 100px;
+.roadmap-marker {
+  position: absolute;
+  transform: translate(-50%, -50%); /* center on the road */
+  width: 36px;
+  height: 36px;
+  background: #D95E52;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.roadmap-marker:hover {
+  transform: translate(-50%, -50%) scale(1.12);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+
+.roadmap-marker.active {
+  background: #3A758C;
+}
+
+/* Cards grid under the road */
+.roadmap-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.roadmap-card {
+  background: #f9f9f9;
+  border-radius: 18px;
+  padding: 18px 20px 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.roadmap-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.roadmap-card-number {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #3A758C;
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.roadmap-card h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: #222;
+}
+
+.roadmap-card p {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.roadmap-card ul {
+  margin-top: 6px;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.roadmap-card.active {
+  border-color: #3A758C;
+  box-shadow: 0 10px 28px rgba(58, 117, 140, 0.20);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .roadmap-section {
+    padding: 40px 16px 30px;
+  }
+
+  .roadmap-visual {
+    height: 200px;
+  }
+
+  .roadmap-marker {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+}
+
+.roadmap-visual svg {
+  transform: translateY(20px);
+}
+
+
+.roadmap-visual {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  margin: -40px auto 20px;  /* ⬅ pull the whole road upward */
+  overflow: visible;
 }
 
   </style>
@@ -158,15 +553,227 @@ footer {
       </p>
     </div>
   </section>
+
+  <!-- Skills -->
+  <section class="skills-section">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Programming Languages</h3>
+        <p>Python · Java · SQL · JavaScript · TypeScript · PHP · R · Arduino</p>
+      </div>
+      <div class="skill-card">
+        <h3>Rapid Prototyping</h3>
+        <p>3D printing · Laser cutting · Vinyl cutting · Embedded prototyping · Hardware retrofitting · Upcycling</p>
+      </div>
+      <div class="skill-card">
+        <h3>Research Methods</h3>
+        <p>Co-design · Elicitation · Participatory research · Design research · Focus groups · Interviews · Ethnographic observations · Surveys</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section class="roadmap-section">
+    <h2 class="section-title">Life Roadmap</h2>
+    <p class="roadmap-intro">
+      A winding path from Yerevan to human–robot interaction, shaped by education,
+      culture, research labs, and community work.
+    </p>
   
+    <!-- Wavy road + markers -->
+    <div class="roadmap-visual">
+      <svg viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
+        <!-- white outline -->
+        <path
+          d="M0,180 C150,60 300,60 450,180 S750,300 900,180 1050,60 1200,140"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="40"
+        />
+        <!-- black road -->
+        <path
+          d="M0,180 C150,60 300,60 450,180 S750,300 900,180 1050,60 1200,140"
+          fill="none"
+          stroke="#111111"
+          stroke-width="26"
+          stroke-linecap="round"
+        />
+        <!-- dashed center line -->
+        <path
+          d="M0,180 C150,60 300,60 450,180 S750,300 900,180 1050,60 1200,140"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="6"
+          stroke-dasharray="18 18"
+          stroke-linecap="round"
+        />
+      </svg>
   
+      <!-- markers (all on/near the road) -->
+      <div class="roadmap-marker" data-step="1"  style="left: 5%;  top: 180px;">1</div>
+      <div class="roadmap-marker" data-step="2"  style="left: 13%; top: 105px;">2</div>
+      <div class="roadmap-marker" data-step="3"  style="left: 21%; top: 165px;">3</div>
+      <div class="roadmap-marker" data-step="4"  style="left: 30%; top: 115px;">4</div>
+      <div class="roadmap-marker" data-step="5"  style="left: 39%; top: 165px;">5</div>
+      <div class="roadmap-marker" data-step="6"  style="left: 48%; top: 125px;">6</div>
+      <div class="roadmap-marker" data-step="7"  style="left: 58%; top: 170px;">7</div>
+      <div class="roadmap-marker" data-step="8"  style="left: 68%; top: 135px;">8</div>
+      <div class="roadmap-marker" data-step="9"  style="left: 77%; top: 175px;">9</div>
+      <div class="roadmap-marker" data-step="10" style="left: 86%; top: 140px;">10</div>
+      <div class="roadmap-marker" data-step="11" style="left: 93%; top: 170px;">11</div>
+      <div class="roadmap-marker" data-step="12" style="left: 98%; top: 150px;">12</div>
+    </div>
+  
+    <!-- cards underneath like before -->
+    <div class="roadmap-cards">
+  
+      <div class="roadmap-card" data-step="1">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">1</div>
+          <h3>Yerevan, Armenia</h3>
+        </div>
+        <p>
+          Born and raised in Yerevan, attending public middle school and discovering a love
+          for stories, science, and making things by hand.
+        </p>
+      </div>
+  
+      <div class="roadmap-card" data-step="2">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">2</div>
+          <h3>TUMO Center for Creative Technologies</h3>
+        </div>
+        <p>
+          Explored graphic design, filmmaking, programming, and game development —
+          my first structured gateway into creative technology.
+        </p>
+      </div>
+  
+      <div class="roadmap-card" data-step="3">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">3</div>
+          <h3>Quantum College</h3>
+        </div>
+        <p>
+          STEM-focused private high school with a math and physics track, debates,
+          and olympiads that grounded my analytical thinking.
+        </p>
+      </div>
+  
+      <div class="roadmap-card" data-step="4">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">4</div>
+          <h3>UWC Dilijan</h3>
+        </div>
+        <p>
+          International education that broadened my worldview and deepened my interest
+          in ethics, cultural context, and global citizenship.
+        </p>
+      </div>
+  
+      <div class="roadmap-card" data-step="5">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">5</div>
+          <h3>Yale Young Global Scholars</h3>
+        </div>
+        <p>
+          Literature, Culture &amp; Philosophy track — sharpened my writing voice and curiosity
+          about how people make sense of themselves and society.
+        </p>
+      </div>
+  
+      <div class="roadmap-card" data-step="6">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">6</div>
+          <h3>Cornell University – Graduation May 2025</h3>
+        </div>
+        <p>
+          B.A. in Information Science &amp; Cognitive Science (3.8 GPA), focusing on interactive
+          technologies, cognition, and human–computer interaction.
+        </p>
+        <ul>
+          <li>International Students Union – Vice President of Publicity</li>
+          <li>The Cornell Daily Sun – Associate Editor in Training</li>
+          <li>Dean’s List, Fall 2023</li>
+        </ul>
+      </div>
+  
+      <div class="roadmap-card" data-step="7">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">7</div>
+          <h3>Interplay Research Studio</h3>
+        </div>
+        <p>
+          Repurposing Robust.ai Carters into a design research platform at the Statler Hotel;
+          co-design with staff, ROS2 &amp; RealSense-based SLAM, and housekeeping cart robots.
+        </p>
+      </div>
+  
+      <div class="roadmap-card" data-step="8">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">8</div>
+          <h3>AIRLab – Cornell Tech</h3>
+        </div>
+        <p>
+          Ethnographic research in NYC hospitals on crash/code cart workflows, mock-code
+          simulations, and design requirements for robot-assisted emergency response.
+        </p>
+      </div>
+  
+      <div class="roadmap-card" data-step="9">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">9</div>
+          <h3>Hybrid Body Lab</h3>
+        </div>
+        <p>
+          Prototyping fish-leather bio-material sensors and kirigami-inspired,
+          skin-integrated wearables for HCI/HRI applications.
+        </p>
+      </div>
+  
+      <div class="roadmap-card" data-step="10">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">10</div>
+          <h3>SciFi Lab</h3>
+        </div>
+        <p>
+          IR-based eyelid tracking glasses for detecting blinks, twitches, and fatigue-related
+          behaviors; temporal signal analysis for mental-state-aware interfaces.
+        </p>
+      </div>
+  
+      <div class="roadmap-card" data-step="11">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">11</div>
+          <h3>Armenian Assembly of America &amp; ANI</h3>
+        </div>
+        <p>
+          Research and digital archiving on the Armenian Genocide and Artsakh; updating
+          online resources and contributing to diaspora advocacy and historical memory.
+        </p>
+      </div>
+  
+      <div class="roadmap-card" data-step="12">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">12</div>
+          <h3>Woad – HRI Field Research</h3>
+        </div>
+        <p>
+          Field research with warehouse robotics teams; studying human–robot workflows and
+          translating observations into design guidance for engineers.
+        </p>
+      </div>
+  
+    </div>
+  </section>
   
   
 
   <div class="container">
     <main>
       <section class="projects">
-        <h2 class="section-title">Designer & Developer Projects</h2>
+        <h2 class="section-title">Designer &amp; Developer Projects</h2>
         <div class="project-cards">
 
           <a href="hardware.html" class="project-card">
@@ -200,7 +807,6 @@ footer {
               <p>A powered cart retrofitted with hoverboard motors and a custom control system for hotel service optimization.</p>
             </div>
           </a>
-          
 
           <a href="work_experience.html" class="project-card">
             <img src="images/work_experience.jpg" alt="Work Experience Thumbnail" />
@@ -214,7 +820,7 @@ footer {
             <img src="images/pilot_study_Lili.png" alt="Research Thumbnail" />
             <div>
               <h3>Research</h3>
-              <p>Human-computer interaction, wearable IR sensing, and digital health interfaces.</p>
+              <p>Human–computer interaction, wearable IR sensing, and digital health interfaces.</p>
             </div>
           </a>
 
@@ -251,5 +857,40 @@ footer {
     src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 
+
+    <script>
+      const markers = document.querySelectorAll('.roadmap-marker');
+      const popups  = document.querySelectorAll('.popup-card');
+      const roadmapSection = document.querySelector('.roadmap-section');
+    
+      function hideAllPopups() {
+        popups.forEach(p => p.style.display = 'none');
+      }
+    
+      markers.forEach(marker => {
+        marker.addEventListener('mouseenter', () => {
+          const step = marker.dataset.step;
+    
+          hideAllPopups();
+    
+          const popup = document.querySelector(`.popup-card[data-step="${step}"]`);
+          if (!popup) return;
+    
+          popup.style.display = 'block';
+    
+          const markerRect = marker.getBoundingClientRect();
+          const popupRect  = popup.getBoundingClientRect();
+    
+          popup.style.top  = (markerRect.bottom + window.scrollY + 12) + 'px';
+          popup.style.left = (markerRect.left + markerRect.width / 2 - popupRect.width / 2) + 'px';
+        });
+      });
+    
+      // Hide when mouse leaves the roadmap section
+      roadmapSection.addEventListener('mouseleave', hideAllPopups);
+    </script>
+    
+    
+    
 </body>
 </html>
