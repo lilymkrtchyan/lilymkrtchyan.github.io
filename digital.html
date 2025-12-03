@@ -7,9 +7,11 @@
   <link rel="stylesheet" href="styles2.css" />
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
+      color: #222;
+      background: #fff;
     }
 
     .navbar {
@@ -26,19 +28,14 @@
       align-items: center;
     }
 
-    .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
     .nav-links {
       list-style: none;
-      padding: 0;
       display: flex;
       gap: 20px;
+      padding: 0;
     }
 
-    .nav-links li a {
+    .nav-links a {
       text-decoration: none;
       color: #333;
       font-weight: 500;
@@ -48,35 +45,43 @@
       border-bottom: 2px solid #333;
     }
 
-    .main-wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .hero-section {
+    .hero {
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 60px 20px 40px;
+      background: #f9f9f9;
     }
 
-    .hero-title {
+    .hero h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
 
-    .hero-subtitle {
-      font-size: 1.2rem;
+    .hero p {
       color: #555;
+      font-size: 1.1rem;
     }
 
-    .video-container,
-    .section-container {
-      margin: 40px 0;
+    .main-content {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
-    .video-container iframe,
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2, h3 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
     iframe,
     img {
+      max-width: 100%;
       width: 100%;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -88,21 +93,9 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    .section-container h2, .section-container h3 {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-      color: #333;
-    }
-
-    .section-container p {
-      line-height: 1.6;
-      margin-bottom: 16px;
-      color: #444;
-    }
-
     .highlight-section {
       background: #f9f9f9;
-      padding: 60px 20px;
+      padding: 40px 24px;
       border-radius: 12px;
     }
 
@@ -112,24 +105,18 @@
     }
 
     .midfi-prototype img {
-      width: 100%;
       max-width: 600px;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .highfi-gallery {
       display: flex;
       flex-direction: column;
       gap: 40px;
-      margin: 40px 0;
+      margin-top: 20px;
     }
 
     .highfi-image {
       width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .footer {
@@ -144,51 +131,67 @@
 </head>
 
 <body>
-  <nav class="navbar" aria-label="Main navigation">
-    <div class="nav-container">
-      <div class="logo">
-        <a href="index.html" class="logo-link">Lili Mkrtchyan</a>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html" class="logo-link">Lili Mkrtchyan</a>
+        </div>
+        
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="hardware.html">CubeScrub</a></li>
+              <li><a href="other.html">FringeEasy</a></li>
+              <li><a href="digital.html" class="active">Telegram LiveChat</a></li>
+              <li><a href="list_projects.html">More Projects</a></li>
+            </ul>
+          </li>
+          <li><a href="work_experience.html">Work</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
       </div>
-      
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#">Projects</a>
-          <ul class="dropdown-menu">
-            <li><a href="hardware.html">CubeScrub</a></li>
-            <li><a href="other.html">FringeEasy</a></li>
-            <li><a href="digital.html">Telegram LiveChat</a></li>
-            <li><a href="list_projects.html">More Projects</a></li>
-          </ul>
-        </li>
-        <li><a href="work_experience.html">Work</a></li>
-        <li><a href="research.html">Research</a></li>
-      </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <main class="main-wrapper">
-    <section class="hero-section">
-      <h1 class="hero-title">Telegram LiveChat</h1>
-      <p class="hero-subtitle">Designing a transparent, real-time messaging experience.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Telegram LiveChat</h1>
+    <p>Designing a transparent, real-time messaging experience.</p>
+  </section>
+
+  <main class="main-content">
+
+    <!-- Interactive prototype at top -->
+    <section>
+      <h2>Try It – Type "ok" to Andres</h2>
+      <iframe
+        style="border: 1px solid #ccc; box-shadow: none; border-radius: 8px;"
+        width="100%"
+        height="450"
+        src="https://embed.figma.com/proto/W37jY5w3C3Mpgqn9k0kR9j/lm688---Telegram-Live-Chat?embed_origin=cdn.embedly.com&kind=proto&node-id=209-108622&page-id=0%3A1&scaling=scale-down&show-proto-sidebar=1&starting-point-node-id=209%3A108622&embed-host=share"
+        allowfullscreen>
+      </iframe>
     </section>
 
-    <section class="video-container">
-      <iframe height="450" src="https://www.youtube.com/embed/O-l8pCmbs4c" frameborder="0" allowfullscreen></iframe>
-    </section>
-
-    <section class="section-container">
+    <!-- Overview -->
+    <section>
       <h2>Overview</h2>
       <p>Telegram LiveChat enables users to see each other's messages as they are typed, introducing a new layer of transparency and immediacy to digital conversations. This case study explores how user research, prototyping, and UI design came together to shape the feature.</p>
     </section>
 
-    <section class="section-container">
+    <!-- User Research Insights -->
+    <section>
       <h2>User Research Insights</h2>
       <p>We identified gaps in personalization and transparency in messaging platforms. Users expressed a desire for more expressive and real-time interactions.</p>
       <img src="images/Solution-Brainstorm.png" alt="Brainstorm Diagram" />
     </section>
 
-    <section class="section-container">
+    <!-- Prototyping the Experience -->
+    <section>
       <h2>Prototyping the Experience</h2>
       <p>Low and mid-fidelity prototypes helped us test ideas quickly. We explored emoji moodboards, live chat, and story formats.</p>
       <div class="gallery-grid">
@@ -198,7 +201,8 @@
       </div>
     </section>
 
-    <section class="section-container">
+    <!-- Mid-Fidelity Prototypes -->
+    <section>
       <h2>Mid-Fidelity Prototypes</h2>
 
       <div class="midfi-prototype">
@@ -217,26 +221,28 @@
       </div>
     </section>
 
-    <section class="section-container">
+    <!-- Design Strategy -->
+    <section>
       <h2>Design Strategy</h2>
       <p>We prioritized LiveChat using an impact-effort matrix and SWOT analysis. This feature aligned with user desires for fluid, transparent interactions.</p>
       <img src="images/Impact-effort-matrix.png" alt="Impact-Effort Matrix" />
     </section>
 
+    <!-- Why Live Chat -->
     <section class="highlight-section">
-      <div class="section-container">
-        <h2>Why Live Chat?</h2>
-        <p>LiveChat redefines how users connect in digital environments. It minimizes waiting, improves clarity, and fosters more authentic, synchronous exchanges—like texting with transparency.</p>
-      </div>
+      <h2>Why Live Chat?</h2>
+      <p>LiveChat redefines how users connect in digital environments. It minimizes waiting, improves clarity, and fosters more authentic, synchronous exchanges—like texting with transparency.</p>
     </section>
 
-    <section class="section-container">
+    <!-- UI Kit & Visual Design -->
+    <section>
       <h2>UI Kit & Visual Design</h2>
       <img src="images/ui_kit.webp" alt="UI Kit Preview" />
       <p>The UI Kit standardizes fonts, spacing, components, and colors across the feature.</p>
     </section>
 
-    <section class="section-container">
+    <!-- High-Fidelity Screens -->
+    <section>
       <h2>High-Fidelity Screens</h2>
       <p>These screens showcase the final visual design for Telegram LiveChat, reflecting real app UI with interactive and responsive layouts.</p>
 
@@ -247,37 +253,32 @@
       </div>
     </section>
 
-    <section class="section-container">
+    <!-- Final Thoughts -->
+    <section>
       <h2>Final Thoughts</h2>
       <p>Telegram LiveChat aims to humanize digital communication through design. From concept to prototype, we anchored decisions in user empathy and forward-thinking interaction.</p>
     </section>
 
-    <section class="section-container">
-      <h2>Try It – Type "Hi" to Andres</h2>
-      <iframe style="border: 1px solid #ccc;" width="100%" height="450" src="https://embed.figma.com/proto/W37jY5w3C3Mpgqn9k0kR9j/lm688---Telegram-Live-Chat?embed_origin=cdn.embedly.com&kind=proto&node-id=209-108622&page-id=0%3A1&scaling=scale-down&show-proto-sidebar=1&starting-point-node-id=209%3A108622&embed-host=share" allowfullscreen></iframe>
-    </section>
   </main>
 
   <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2024 Lili Mkrtchyan</p>
-      <p>Made with creativity and clarity.</p>
-    </div>
+    <p>&copy; 2024 Lili Mkrtchyan</p>
+    <p>Made with creativity and clarity.</p>
   </footer>
 
   <!-- Default Statcounter code for My personal website
-https://lilymkrtchyan.github.io/ -->
-<script type="text/javascript">
-  var sc_project=13069539; 
-  var sc_invisible=1; 
-  var sc_security="29d96c63"; 
+  https://lilymkrtchyan.github.io/ -->
+  <script type="text/javascript">
+    var sc_project=13069539; 
+    var sc_invisible=1; 
+    var sc_security="29d96c63"; 
   </script>
   <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js" async></script>
+    src="https://www.statcounter.com/counter/counter.js" async></script>
   <noscript><div class="statcounter"><a title="Web Analytics"
-  href="https://statcounter.com/" target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+    href="https://statcounter.com/" target="_blank"><img class="statcounter"
+    src="https://c.statcounter.com/13069539/0/29d96c63/1/" alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
   <!-- End of Statcounter Code -->
 </body>
 </html>
