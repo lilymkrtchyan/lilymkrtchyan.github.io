@@ -217,18 +217,19 @@
     }
 
     /* positions for each marker on the road */
-    .roadmap-marker[data-step="1"]  { left:  5%; top: 180px; }
-    .roadmap-marker[data-step="2"]  { left: 13%; top: 105px; }
-    .roadmap-marker[data-step="3"]  { left: 21%; top: 165px; }
-    .roadmap-marker[data-step="4"]  { left: 30%; top: 115px; }
-    .roadmap-marker[data-step="5"]  { left: 39%; top: 165px; }
-    .roadmap-marker[data-step="6"]  { left: 48%; top: 125px; }
-    .roadmap-marker[data-step="7"]  { left: 58%; top: 170px; }
-    .roadmap-marker[data-step="8"]  { left: 68%; top: 135px; }
-    .roadmap-marker[data-step="9"]  { left: 77%; top: 175px; }
-    .roadmap-marker[data-step="10"] { left: 86%; top: 140px; }
-    .roadmap-marker[data-step="11"] { left: 93%; top: 170px; }
-    .roadmap-marker[data-step="12"] { left: 98%; top: 150px; }
+    .roadmap-marker[data-step="1"]  { left:  4%;  top: 180px; }
+    .roadmap-marker[data-step="2"]  { left: 11%;  top: 105px; }
+    .roadmap-marker[data-step="3"]  { left: 18%;  top: 165px; }
+    .roadmap-marker[data-step="4"]  { left: 26%;  top: 115px; }
+    .roadmap-marker[data-step="5"]  { left: 34%;  top: 165px; }
+    .roadmap-marker[data-step="6"]  { left: 42%;  top: 125px; }
+    .roadmap-marker[data-step="7"]  { left: 50%;  top: 170px; }
+    .roadmap-marker[data-step="8"]  { left: 58%;  top: 135px; }
+    .roadmap-marker[data-step="9"]  { left: 66%;  top: 175px; }
+    .roadmap-marker[data-step="10"] { left: 74%;  top: 140px; }
+    .roadmap-marker[data-step="11"] { left: 82%;  top: 170px; }
+    .roadmap-marker[data-step="12"] { left: 90%;  top: 150px; }
+    .roadmap-marker[data-step="13"] { left: 97%;  top: 165px; }
 
     /* ---------- Popup cards above road ---------- */
     .roadmap-popups {
@@ -455,7 +456,7 @@
         />
       </svg>
 
-      <!-- markers -->
+      <!-- markers, now 1–13 -->
       <div class="roadmap-marker" data-step="1">1</div>
       <div class="roadmap-marker" data-step="2">2</div>
       <div class="roadmap-marker" data-step="3">3</div>
@@ -468,16 +469,19 @@
       <div class="roadmap-marker" data-step="10">10</div>
       <div class="roadmap-marker" data-step="11">11</div>
       <div class="roadmap-marker" data-step="12">12</div>
+      <!-- <div class="roadmap-marker" data-step="13">13</div> -->
     </div>
 
-    <!-- Popups for pins -->
+    <!-- Popups for pins (1–13 in your corrected order) -->
     <div class="roadmap-popups">
+      <!-- 1. Yerevan -->
       <div class="popup-card" data-step="1">
         <img src="images/yerevan_me.jpg" alt="Yerevan" class="popup-img">
         <h3>Yerevan, Armenia</h3>
         <p>Where it all began — public school, stories, science, and making things by hand.</p>
       </div>
 
+      <!-- 2. TUMO -->
       <div class="popup-card" data-step="2">
         <img src="images/TUMO.png" alt="TUMO Center" class="popup-img">
         <h3>TUMO Center for Creative Technologies</h3>
@@ -485,12 +489,14 @@
         <a href="https://tumo.org/" target="_blank" class="popup-link">Visit TUMO →</a>
       </div>
 
+      <!-- 3. Quantum -->
       <div class="popup-card" data-step="3">
-        <!-- <img src="images/roadmap_quantum.jpg" alt="Quantum College" class="popup-img"> -->
-          <h3>Quantum College</h3>
+        <!-- Optional image here -->
+        <h3>Quantum College</h3>
         <p>STEM-focused high school with intensive math &amp; physics, olympiads, and debates.</p>
       </div>
 
+      <!-- 4. UWC -->
       <div class="popup-card" data-step="4">
         <img src="images/UWC.png" alt="UWC Dilijan" class="popup-img">
         <h3>UWC Dilijan</h3>
@@ -498,61 +504,75 @@
         <a href="https://uwcdilijan.org" target="_blank" class="popup-link">Visit UWC Dilijan →</a>
       </div>
 
-      <div class="popup-card" data-step="5">
-        <!-- <img src="images/roadmap_yygs.jpg" alt="Yale Young Global Scholars" class="popup-img"> -->
+      <!-- 5. YYGS -->
+      <!-- <div class="popup-card" data-step="5">
         <h3>Yale Young Global Scholars</h3>
         <p>Literature, Culture &amp; Philosophy track — sharpening my voice and curiosity about how people make meaning.</p>
-      </div>
+      </div> -->
 
-      <div class="popup-card" data-step="6">
+      <!-- 5. Cornell -->
+      <div class="popup-card" data-step="5">
         <img src="images/cornell_graduation.jpg" alt="Cornell University" class="popup-img">
         <h3>Cornell University – Graduation May 2025</h3>
         <p>B.A. in Information Science &amp; Cognitive Science (3.8 GPA), focusing on interactive technologies and cognition.</p>
         <a href="files/MKRTCHYAN.LILI.CV-2025.pdf" target="_blank" class="popup-link">View my CV →</a>
       </div>
 
+      <!-- 6. SciFi Lab -->
+      <div class="popup-card" data-step="6">
+        <img src="images/pilot_study_Lili.png" alt="SciFi Lab" class="popup-img">
+        <h3>SciFi Lab</h3>
+        <p>IR-based eyelid tracking and temporal signal analysis for mental-state-aware interfaces.</p>
+      </div>
+
+      <!-- 7. University of Edinburgh -->
       <div class="popup-card" data-step="7">
+        <img src="images/edinburgh_me.jpg" alt="University of Edinburgh" class="popup-img">
+        <h3>University of Edinburgh – Study Abroad</h3>
+        <p>One of my most formative experiences — studying abroad in Scotland, exploring HCI, digital society, and city life in Edinburgh.</p>
+      </div>
+
+      <!-- 8. Armenian Assembly -->
+      <div class="popup-card" data-step="8">
+        <img src="images/Week1InternCapitolPhoto3.jpg" alt="Armenian Assembly of America" class="popup-img">
+        <h3>Armenian Assembly of America &amp; ANI</h3>
+        <p>Archival research and documentation on the Armenian Genocide and Artsakh; digital advocacy.</p>
+      </div>
+
+      <!-- 9. Interplay -->
+      <div class="popup-card" data-step="9">
         <img src="images/interplay.jpg" alt="Interplay Research Studio" class="popup-img">
         <h3>Interplay Research Studio</h3>
         <p>Statler robots, co-design workshops, SLAM mapping, and robot-assisted hotel workflows.</p>
         <a href="research.html" class="popup-link">See my research →</a>
       </div>
 
-      <div class="popup-card" data-step="8">
+      <!-- 10. AIRLab -->
+      <div class="popup-card" data-step="10">
         <img src="images/airLab.jpg" alt="AIRLab" class="popup-img">
         <h3>AIRLab – Cornell Tech</h3>
         <p>Crash/code cart ethnography at NYC hospitals; designing robot-assisted emergency response.</p>
         <a href="research.html" class="popup-link">Read more →</a>
       </div>
 
-      <div class="popup-card" data-step="9">
+      <!-- 11. Hybrid Body Lab -->
+      <div class="popup-card" data-step="11">
         <img src="images/hybrid_body_lab.jpg" alt="Hybrid Body Lab" class="popup-img">
         <h3>Hybrid Body Lab</h3>
         <p>Fish-leather bio-material sensors and kirigami-inspired wearable interfaces for HCI/HRI.</p>
       </div>
 
-      <div class="popup-card" data-step="10">
-        <img src="images/pilot_study_Lili.png" alt="SciFi Lab" class="popup-img">
-        <h3>SciFi Lab</h3>
-        <p>IR-based eyelid tracking and temporal signal analysis for mental-state-aware interfaces.</p>
-      </div>
-
-      <div class="popup-card" data-step="11">
-        <img src="images/Week1InternCapitolPhoto3.jpg" alt="Armenian Assembly of America" class="popup-img">
-        <h3>Armenian Assembly of America &amp; ANI</h3>
-        <p>Archival research and documentation on the Armenian Genocide and Artsakh; digital advocacy.</p>
-      </div>
-
+      <!-- 12. Woad -->
       <div class="popup-card" data-step="12">
-        <!-- <img src="images/roadmap_woad.jpg" alt="Woad HRI Fieldwork" class="popup-img"> -->
         <h3>Woad – HRI Field Research</h3>
         <p>Warehouse robotics fieldwork; translating observations into design guidance for engineers.</p>
         <a href="work_experience.html" class="popup-link">See work experience →</a>
       </div>
     </div>
 
-    <!-- Cards under the road -->
+    <!-- Cards under the road (1–13, same order) -->
     <div class="roadmap-cards">
+      <!-- 1 -->
       <div class="roadmap-card" data-step="1">
         <div class="roadmap-card-header">
           <div class="roadmap-card-number">1</div>
@@ -562,6 +582,7 @@
           for stories, science, and making things by hand.</p>
       </div>
 
+      <!-- 2 -->
       <div class="roadmap-card" data-step="2">
         <div class="roadmap-card-header">
           <div class="roadmap-card-number">2</div>
@@ -570,6 +591,7 @@
         <p>Explored graphic design, filmmaking, programming, and game development — my first structured gateway into creative technology.</p>
       </div>
 
+      <!-- 3 -->
       <div class="roadmap-card" data-step="3">
         <div class="roadmap-card-header">
           <div class="roadmap-card-number">3</div>
@@ -578,6 +600,7 @@
         <p>STEM-focused private high school with a math and physics track, debates, and olympiads that grounded my analytical thinking.</p>
       </div>
 
+      <!-- 4 -->
       <div class="roadmap-card" data-step="4">
         <div class="roadmap-card-header">
           <div class="roadmap-card-number">4</div>
@@ -586,17 +609,19 @@
         <p>International education that broadened my worldview and deepened my interest in ethics, cultural context, and global citizenship.</p>
       </div>
 
-      <div class="roadmap-card" data-step="5">
+      <!-- 5 -->
+      <!-- <div class="roadmap-card" data-step="5">
         <div class="roadmap-card-header">
           <div class="roadmap-card-number">5</div>
           <h3>Yale Young Global Scholars</h3>
         </div>
         <p>Literature, Culture &amp; Philosophy track — sharpened my writing voice and curiosity about how people make sense of themselves and society.</p>
-      </div>
+      </div> -->
 
-      <div class="roadmap-card" data-step="6">
+      <!-- 5 -->
+      <div class="roadmap-card" data-step="5">
         <div class="roadmap-card-header">
-          <div class="roadmap-card-number">6</div>
+          <div class="roadmap-card-number">5</div>
           <h3>Cornell University – Graduation May 2025</h3>
         </div>
         <p>B.A. in Information Science &amp; Cognitive Science (3.8 GPA), focusing on interactive
@@ -608,49 +633,64 @@
         </ul>
       </div>
 
-      <div class="roadmap-card" data-step="7">
+      <!-- 6 -->
+      <div class="roadmap-card" data-step="6">
         <div class="roadmap-card-header">
-          <div class="roadmap-card-number">7</div>
-          <h3>Interplay Research Studio</h3>
-        </div>
-        <p>Repurposing Robust.ai Carters into a design research platform at the Statler Hotel; co-design with staff, ROS2 &amp; RealSense-based SLAM, and housekeeping cart robots.</p>
-      </div>
-
-      <div class="roadmap-card" data-step="8">
-        <div class="roadmap-card-header">
-          <div class="roadmap-card-number">8</div>
-          <h3>AIRLab – Cornell Tech</h3>
-        </div>
-        <p>Ethnographic research in NYC hospitals on crash/code cart workflows, mock-code simulations, and design requirements for robot-assisted emergency response.</p>
-      </div>
-
-      <div class="roadmap-card" data-step="9">
-        <div class="roadmap-card-header">
-          <div class="roadmap-card-number">9</div>
-          <h3>Hybrid Body Lab</h3>
-        </div>
-        <p>Prototyping fish-leather bio-material sensors and kirigami-inspired,
-          skin-integrated wearables for HCI/HRI applications.</p>
-      </div>
-
-      <div class="roadmap-card" data-step="10">
-        <div class="roadmap-card-header">
-          <div class="roadmap-card-number">10</div>
+          <div class="roadmap-card-number">6</div>
           <h3>SciFi Lab</h3>
         </div>
         <p>IR-based eyelid tracking glasses for detecting blinks, twitches, and fatigue-related
           behaviors; temporal signal analysis for mental-state-aware interfaces.</p>
       </div>
 
-      <div class="roadmap-card" data-step="11">
+      <!-- 7 -->
+      <div class="roadmap-card" data-step="7">
         <div class="roadmap-card-header">
-          <div class="roadmap-card-number">11</div>
+          <div class="roadmap-card-number">7</div>
+          <h3>University of Edinburgh – Study Abroad</h3>
+        </div>
+        <p>Study abroad in Scotland, taking courses in HCI and related areas while exploring Edinburgh — one of my most educational and meaningful experiences.</p>
+      </div>
+
+      <!-- 8 -->
+      <div class="roadmap-card" data-step="8">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">8</div>
           <h3>Armenian Assembly of America &amp; ANI</h3>
         </div>
         <p>Research and digital archiving on the Armenian Genocide and Artsakh; updating
           online resources and contributing to diaspora advocacy and historical memory.</p>
       </div>
 
+      <!-- 9 -->
+      <div class="roadmap-card" data-step="9">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">9</div>
+          <h3>Interplay Research Studio</h3>
+        </div>
+        <p>Repurposing Robust.ai Carters into a design research platform at the Statler Hotel; co-design with staff, ROS2 &amp; RealSense-based SLAM, and housekeeping cart robots.</p>
+      </div>
+
+      <!-- 10 -->
+      <div class="roadmap-card" data-step="10">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">10</div>
+          <h3>AIRLab – Cornell Tech</h3>
+        </div>
+        <p>Ethnographic research in NYC hospitals on crash/code cart workflows, mock-code simulations, and design requirements for robot-assisted emergency response.</p>
+      </div>
+
+      <!-- 11 -->
+      <div class="roadmap-card" data-step="11">
+        <div class="roadmap-card-header">
+          <div class="roadmap-card-number">11</div>
+          <h3>Hybrid Body Lab</h3>
+        </div>
+        <p>Prototyping fish-leather bio-material sensors and kirigami-inspired,
+          skin-integrated wearables for HCI/HRI applications.</p>
+      </div>
+
+      <!-- 12 -->
       <div class="roadmap-card" data-step="12">
         <div class="roadmap-card-header">
           <div class="roadmap-card-number">12</div>
